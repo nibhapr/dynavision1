@@ -1,1 +1,0 @@
-import"./hoisted.MjEQZ2Fj.js";const e=(new Date).getFullYear(),t=document.getElementById("current-year");t.innerText=e.toString();

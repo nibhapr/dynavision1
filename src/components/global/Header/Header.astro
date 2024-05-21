@@ -17,7 +17,7 @@ import { Image } from "astro:assets";
 	>
 		<Image
 			src={logo}
-			class="mx-auto w-32 h-12 lg:w-16 lg:h-6"
+			class="w-32 h-12"
 			alt="Lovosis Technology U.A.E"
 			loading={"eager"}
 		/>
@@ -106,14 +106,14 @@ import { Image } from "astro:assets";
 		</ul>
 	</nav>
 </header>
-<nav class="w-screen md:hidden px-2 bg-white">
+<nav class="w-screen md:hidden px-2 bg-white sticky top-0 z-10">
 	<div class="flex justify-between">
 		<a
 			href=""
 			class="border-0 flex-shrink-0 flex items-center justify-center px-0"
 		>
 			<Image
-				class="mx-auto md:me-auto md:ms-0 object-fit w-32 h-6"
+				class="mx-auto md:me-auto md:ms-0 object-fit w-24 h-8"
 				src={logo}
 				alt="Lovosis Technology L.L.C"
 				loading={"eager"}
@@ -124,7 +124,7 @@ import { Image } from "astro:assets";
 		</div>
 	</div>
 	<div id="collapseContent" class="hidden">
-		<ul class="items-center ml-4 xl:ml-8 mr-auto text-black">
+		<ul class="items-center ml-4 xl:ml-8 mr-auto transition-all text-black">
 			{navBarLinks.map((link) => <NavLink url={link.url} name={link.name} />)}
 		</ul>
 	</div>

@@ -3,6 +3,8 @@ import { SEO } from "astro-seo";
 import "@style/tailwind.css";
 import { seoConfig } from "@util/seoConfig";
 import Header from "../Header/Header.astro";
+import FooterSection from "@component/FooterSection.astro";
+
 export interface Props {
 	title: string;
 	ogTitle?: string;
@@ -146,5 +148,6 @@ const {
 		</main>
 
 		<script></script>
+		<FooterSection />
 	</body>
 </html>

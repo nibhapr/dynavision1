@@ -1,13 +1,12 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
-import compress from "astro-compress";
+import playformCompress from "@playform/compress";
 import { VitePWA } from "vite-plugin-pwa";
 import icon from "astro-icon";
 import { manifest, seoConfig } from "./utils/seoConfig";
 import react from "@astrojs/react";
 
-// https://astro.build/config
 export default defineConfig({
 	site: seoConfig.baseURL,
 	integrations: [
@@ -16,7 +15,7 @@ export default defineConfig({
 			configFile: "./tailwind.config.js",
 		}),
 		sitemap(),
-		compress(),
+		playformCompress(),
 		icon({
 			include: {
 				tabler: ["*"],

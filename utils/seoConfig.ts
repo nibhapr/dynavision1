@@ -6,7 +6,7 @@ export const seoConfig = {
 		"Boosting businesses in Kerala, with top-tier web design, digital marketing, and app development services. Dominate online with our expert SEO strategies.",
 	type: "website",
 	image: {
-		url: "https://picsum.photos/1200/630", // Change this to your website's thumbnail.
+		url: "https://digiimpact.in/digiimpact.jpg", // Change this to your website's thumbnail.
 		alt: "OpenGraph thumbnail description.", // Change this to your website's thumbnail description.
 		width: 1200,
 		height: 630,
