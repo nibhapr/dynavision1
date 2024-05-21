@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import img from "../assets/img/herojpg.jpg";
+import { Button } from "./ui/button";
+import BackgroundBeams from "./BackgroundBeams";
+---
+
+<div class="max-w-screen-xl mx-auto px-6 md:px-14 xl:px-14">
+	<div
+		class="relative flex flex-col-reverse items-center md:flex-row"
+		id="hero"
+	>
+		<div class="row items-center py-5 md:w-6/12 md:pb-20 md:pt-10">
+			<div class="text-left space-y-3">
+				<h1 class="text-5xl font-medium leading-none md:text-6xl">
+					Navigating the <br /> digital landscape <br /> for success
+				</h1>
+				<p class="mt-6 mb-8 text-xl font-normal leading-7 sm:mb-12">
+					Our digital marketing agency helps businesses grow and succeed online
+					through a range of services including SEO, PPC, social media
+					marketing, and content creation.
+				</p>
+				<Button
+					className="p-8 border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex text-xl font-normal leading-7"
+					variant="secondary"
+				>
+					Book a consultation
+				</Button>
+			</div>
+		</div>
+		<div class="flex items-center py-5 md:w-6/12 md:pb-20 md:pt-10">
+			<Image
+				src={img}
+				loading="eager"
+				alt="Digiimpact Kerala"
+				loading="eager"
+			/>
+		</div>
+	</div>
+</div>

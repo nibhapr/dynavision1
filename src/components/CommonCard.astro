@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from "astro:content";
+import OptimizedCover from "../components/OptimizedPicture.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import { Image } from "astro:assets";
+import TracingBeam from "./TracingBeam";
+import OptimizedPicture from "../components/OptimizedPicture.astro";
+
+interface Props {
+	post: CollectionEntry<"posts">;
+}
+
+const { post } = Astro.props;
+---
+
+<div
+	class="relative overflow-hidden rounded-xl bg-black transition-transform duration-500 hover:-translate-y-1 hover:scale-105 dark:bg-neutral-900"
+>
+	<a href={`/posts/${post.slug}/`} class="block">
+		<img src={post.data.coverSrc} alt="" />
+		<div class="absolute bottom-0 end-0 start-0 bg-gradient-to-t p-5 md:p-6">
+			<h3 class="mt-2 text-lg font-bold text-white">
+				{post.data.title}
+			</h3>
+			<div class="mt-16 flex items-center gap-4 text-xs text-white">
+				<span>{post.data.tags.join(" ")}</span>
+				<FormattedDate date={post.data.pubDate} />
+			</div>
+			<h3 class="mt-2 text-lg font-bold text-white">{post.data.description}</h3>
+		</div>
+	</a>
+</div>

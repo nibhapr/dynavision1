@@ -1,0 +1,34 @@
+---
+import Container from "./container.astro";
+import hikvision from "../assets/img/about-bg.png";
+import { Image } from "astro:assets";
+---
+
+<Container>
+	<div class="flex-row items-center my-6 p-14 bg-zinc-100 rounded-[45px]">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+			<div class="justify-start items-center gap-[275px] flex">
+				<div
+					class="flex-col justify-start items-start gap-[26px] inline-flex text-black"
+				>
+					<div class="text-3xl font-medium">Let’s make things happen</div>
+					<div class="text-lg font-normal">
+						Contact us today to learn more about how our digital marketing
+						services can help your business grow and succeed online.
+					</div>
+					<a
+						href="/"
+						class="px-[35px] py-5 bg-zinc-900 rounded-[14px] justify-start items-start gap-2.5 inline-flex"
+					>
+						<div class="text-center text-white text-xl font-normal leading-7">
+							Get your free proposal
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="hidden md:grid justify-items-center m-10">
+				<Image src={hikvision} alt="cat" />
+			</div>
+		</div>
+	</div>
+</Container>

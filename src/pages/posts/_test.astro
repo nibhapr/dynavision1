@@ -1,0 +1,52 @@
+---
+import { getCategoryMetadata } from "@util/common";
+import { getCollection } from "astro:content";
+import PostCard from "@component/CommonCard.astro";
+import { Layout } from "@globals";
+import Pagination from "@component/Pagination.astro";
+export async function getStaticPaths() {
+	const allPosts = await getCollection("posts");
+	const uniqueCategory = [
+		...new Set(allPosts.map((post) => post.data.category).flat()),
+	];
+
+	return uniqueCategory.flatMap((category) => {
+		const pageSize = 10;
+		const totalPages = Math.ceil(allPosts.length / pageSize);
+
+		return Array.from({ length: totalPages }, (_, index) => ({
+			params: { category, page: (index + 1).toString() },
+			props: {
+				page: {
+					data: allPosts.slice(index * pageSize, (index + 1) * pageSize),
+					currentPage: index + 1,
+					lastPage: totalPages,
+				},
+			},
+		}));
+	});
+}
+
+const params = Astro.params;
+const { page } = Astro.props;
+const { title, description } = getCategoryMetadata(params.category);
+---
+
+<Layout title="Astro PWA Starter">
+	<div class="py-12 max-w-6xl mx-auto">
+		<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+			{page.data.map((post) => <PostCard post={post} />)}
+		</div>
+
+		<Pagination
+			currentPage={page.currentPage}
+			lastPage={page.lastPage}
+			urlPrev={page.currentPage > 1 ? `/posts/${page.currentPage - 1}` : null}
+			urlNext={page.currentPage < page.lastPage
+				? `/posts/${page.currentPage + 1}`
+				: null}
+			basePath={`/posts`}
+			maxDisplayedPages={5}
+		/>
+	</div>
+</Layout>

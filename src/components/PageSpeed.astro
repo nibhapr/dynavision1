@@ -1,0 +1,55 @@
+---
+// Replace 'YOUR_API_KEY' with your actual PageSpeed Insights API key
+const API_KEY = "AIzaSyAeSYcVRDkeG0fWg7eGeh3vHBZrX8gWj4c";
+const PAGE_URL = "https://dubai-hikvision.com"; // Replace 'example.com' with your website URL
+
+// Construct the API request URL
+const API_URL = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(PAGE_URL)}&key=${API_KEY}`;
+
+// Function to fetch PageSpeed Insights data
+async function fetchPageSpeedInsights() {
+	try {
+		const response = await fetch(API_URL);
+		const data = await response.json();
+		return data;
+	} catch (error) {
+		console.error("Error fetching PageSpeed Insights data:", error);
+		return null;
+	}
+}
+
+// Function to display PageSpeed Insights data
+function displayPageSpeedInsights(data) {
+	// Check if data is available
+	if (data) {
+		// Extract relevant performance metrics
+		const pageSpeedScore =
+			data.lighthouseResult.categories.performance.score * 100;
+		const firstContentfulPaint =
+			data.loadingExperience.metrics.FIRST_CONTENTFUL_PAINT_MS.median;
+		const largestContentfulPaint =
+			data.loadingExperience.metrics.LARGEST_CONTENTFUL_PAINT_MS.median;
+
+		// Display the data on the page
+		document.getElementById("pageSpeedScore").textContent =
+			pageSpeedScore.toFixed(2);
+		document.getElementById("firstContentfulPaint").textContent =
+			firstContentfulPaint.toFixed(2);
+		document.getElementById("largestContentfulPaint").textContent =
+			largestContentfulPaint.toFixed(2);
+	} else {
+		// Display an error message if data is not available
+		document.getElementById("pageSpeedScore").textContent = "N/A";
+		document.getElementById("firstContentfulPaint").textContent = "N/A";
+		document.getElementById("largestContentfulPaint").textContent = "N/A";
+	}
+}
+
+// Fetch PageSpeed Insights data and display it when the page loads
+document.addEventListener("DOMContentLoaded", async () => {
+	const pageSpeedData = await fetchPageSpeedInsights();
+	displayPageSpeedInsights(pageSpeedData);
+});
+---
+
+<p>{PAGE_URL}</p>

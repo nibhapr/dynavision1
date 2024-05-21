@@ -1,0 +1,15 @@
+---
+// Destructure the properties from Astro.props
+const { url, name } = Astro.props;
+
+// Define TypeScript interface for the properties
+interface Props {
+  url: string;
+  name: string;
+}
+---
+<li class="p-3 xl:p-6 active">
+    <a href={url}>
+      <span>{name}</span>
+    </a>
+  </li>

@@ -1,0 +1,19 @@
+---
+const { url } = Astro.props;
+interface Props {
+  url: string;
+}
+const linkClass =
+  // "size-8 inline-flex justify-center items-center border border-gray-800 rounded-md hover:border-teal-500 dark:hover:border-teal-500 hover:bg-teal-500 dark:hover:bg-teal-500";
+  "inline-block rounded-full border p-2 mr-4 hover:shadow-lg hover:border-opacity-0 duration-200 hover:-translate-y-0.5";
+---
+
+<li class=inline>
+  <a href={url} target="_blank" 
+  class ={linkClass}
+  aria-label="social media"
+  aria-labelledby="Lovosis Technology"
+  >
+  <slot />
+</a>
+</li>
