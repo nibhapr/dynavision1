@@ -14,7 +14,7 @@ const { post } = Astro.props;
 ---
 
 <div
-	class="relative overflow-hidden rounded-xl bg-black transition-transform duration-500 hover:-translate-y-1 hover:scale-105 dark:bg-neutral-900"
+	class="relative overflow-hidden rounded-xl bg-black transition-transform duration-500 hover:-translate-y-1 hover:scale-105 dark:bg-neutral-900 m-4"
 >
 	<a href={`/posts/${post.slug}/`} class="block">
 		<img src={post.data.coverSrc} alt="" />
