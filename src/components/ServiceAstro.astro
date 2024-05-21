@@ -1,11 +1,11 @@
 ---
 import Container from "./container.astro";
-import hikvision from "../assets/img/about-bg.png";
+import hikvision from "../assets/img/laravel.jpg";
 import { Image } from "astro:assets";
 ---
 
 <Container>
-	<div class="flex-row items-center my-6 p-14 bg-zinc-100 rounded-[45px]">
+	<div class="flex-row items-center my-6 p-4 bg-white rounded">
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 			<div class="justify-start items-center gap-[275px] flex">
 				<div
@@ -26,7 +26,7 @@ import { Image } from "astro:assets";
 					</a>
 				</div>
 			</div>
-			<div class="hidden md:grid justify-items-center m-10">
+			<div class="grid cols-1">
 				<Image src={hikvision} alt="cat" />
 			</div>
 		</div>
