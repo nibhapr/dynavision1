@@ -1,6 +1,6 @@
 ---
 title: Queue Management System
-slug: components5
+slug: qmanagement
 description: Manage your Queue with you Mobile phone
 category:
   - One

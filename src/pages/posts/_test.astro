@@ -41,11 +41,13 @@ const { title, description } = getCategoryMetadata(params.category);
 		<Pagination
 			currentPage={page.currentPage}
 			lastPage={page.lastPage}
-			urlPrev={page.currentPage > 1 ? `/posts/${page.currentPage - 1}` : null}
-			urlNext={page.currentPage < page.lastPage
-				? `/posts/${page.currentPage + 1}`
+			urlPrev={page.currentPage > 1
+				? `/posts/documentation/${page.currentPage - 1}`
 				: null}
-			basePath={`/posts`}
+			urlNext={page.currentPage < page.lastPage
+				? `/posts/documentation/${page.currentPage + 1}`
+				: null}
+			basePath={`/posts/documentation`}
 			maxDisplayedPages={5}
 		/>
 	</div>

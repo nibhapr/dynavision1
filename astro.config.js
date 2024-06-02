@@ -6,7 +6,9 @@ import { VitePWA } from "vite-plugin-pwa";
 import icon from "astro-icon";
 import { manifest, seoConfig } from "./utils/seoConfig";
 import react from "@astrojs/react";
+import mdx from "@astrojs/mdx";
 
+// https://astro.build/config
 export default defineConfig({
 	site: seoConfig.baseURL,
 	integrations: [
@@ -22,6 +24,13 @@ export default defineConfig({
 			},
 		}),
 		react(),
+		mdx({
+			syntaxHighlight: "shiki",
+			shikiConfig: {
+				theme: "github-dark-dimmed",
+			},
+			gfm: true,
+		}),
 	],
 	vite: {
 		plugins: [

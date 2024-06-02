@@ -4,3 +4,11 @@ export function getCategoryMetadata(category: string) {
 		description: `Browse all articles under the ${category} category in AstroVerse`,
 	};
 }
+
+export async function getTableOfContents(
+	content: string,
+): Promise<TableOfContents> {
+	const result = await remark().use(getToc).process(content);
+
+	return result.data;
+}

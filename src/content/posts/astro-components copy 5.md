@@ -1,6 +1,6 @@
 ---
 title: Whatsapp API Integration
-slug: components4
+slug: whatsapp
 description: Unofficial Whatsapp API for Developers
 category:
   - One

@@ -1,5 +1,15 @@
 declare module 'astro:content' {
 	interface Render {
+		'.mdx': Promise<{
+			Content: import('astro').MarkdownInstance<{}>['Content'];
+			headings: import('astro').MarkdownHeading[];
+			remarkPluginFrontmatter: Record<string, any>;
+		}>;
+	}
+}
+
+declare module 'astro:content' {
+	interface Render {
 		'.md': Promise<{
 			Content: import('astro').MarkdownInstance<{}>['Content'];
 			headings: import('astro').MarkdownHeading[];
@@ -127,6 +137,64 @@ declare module 'astro:content' {
 	type ContentEntryMap = {
 		"blog": {
 };
+"docs": {
+"documentation/code-blocks.mdx": {
+	id: "documentation/code-blocks.mdx";
+  slug: "documentation/code-blocks";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"documentation/index.mdx": {
+	id: "documentation/index.mdx";
+  slug: "documentation";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"documentation/qmanagement.mdx": {
+	id: "documentation/qmanagement.mdx";
+  slug: "documentation/qmanagement";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"documentation/restaurant.mdx": {
+	id: "documentation/restaurant.mdx";
+  slug: "documentation/restaurant";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"documentation/style-guide.mdx": {
+	id: "documentation/style-guide.mdx";
+  slug: "documentation/style-guide";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"documentation/whatsapp.mdx": {
+	id: "documentation/whatsapp.mdx";
+  slug: "documentation/whatsapp";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"getting-started.mdx": {
+	id: "getting-started.mdx";
+  slug: "getting-started";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"in-progress.mdx": {
+	id: "in-progress.mdx";
+  slug: "in-progress";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+};
 "feature": {
 "feature-1.md": {
 	id: "feature-1.md";
@@ -195,21 +263,21 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 "astro-components copy 5.md": {
 	id: "astro-components copy 5.md";
-  slug: "components4";
+  slug: "whatsapp";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "astro-components copy 6.md": {
 	id: "astro-components copy 6.md";
-  slug: "components5";
+  slug: "qmanagement";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "astro-components copy 7.md": {
 	id: "astro-components copy 7.md";
-  slug: "components6";
+  slug: "style-guide";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">

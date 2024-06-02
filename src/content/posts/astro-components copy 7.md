@@ -1,6 +1,6 @@
 ---
 title: Restaurant Whatsapp Delivery system
-slug: components6
+slug: style-guide
 description: POS, Digital Menu, Whatsapp order, All in one
 category:
   - One

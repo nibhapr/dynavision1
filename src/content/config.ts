@@ -46,9 +46,17 @@ const postsCollection = defineCollection({
 			author: z.string(),
 		}),
 });
+
+const docs = defineCollection({
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+	}),
+});
 export const collections = {
 	blog: blogCollection,
 	slider: sliderCollection,
 	feature: featureCollection,
 	posts: postsCollection,
+	docs,
 };
