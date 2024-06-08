@@ -10,23 +10,62 @@ export default function Faq() {
 		<div className="max-w-7xl w-full mx-auto p-8 mt-8 bg-slate-50 rounded shadow">
 			<Accordion type="single" collapsible className="w-full">
 				<AccordionItem value="item-1">
-					<AccordionTrigger>Is it accessible?</AccordionTrigger>
+					<AccordionTrigger>
+						What types of educational equipment do you distribute?
+					</AccordionTrigger>
 					<AccordionContent>
-						Yes. It adheres to the WAI-ARIA design pattern.
+						We distribute a wide range of educational equipment tailored to
+						various subjects and disciplines. Our offerings include work
+						benches,digital meters,DSO.
 					</AccordionContent>
 				</AccordionItem>
 				<AccordionItem value="item-2">
-					<AccordionTrigger>Is it styled?</AccordionTrigger>
+					<AccordionTrigger>Who are your typical customers?</AccordionTrigger>
 					<AccordionContent>
-						Yes. It comes with default styles that matches the other
-						components&apos; aesthetic.
+						Our typical customers include schools,Engineering
+						colleges,Polytechnics,ITI,NTTF universities, training centers,
+						educational institutions, teachers, professors, researchers, and
+						homeschooling parents. We cater to the needs of educators and
+						students at all levels, from kindergarten to higher education.
 					</AccordionContent>
 				</AccordionItem>
 				<AccordionItem value="item-3">
-					<AccordionTrigger>Is it animated?</AccordionTrigger>
+					<AccordionTrigger>How can I place an order?</AccordionTrigger>
 					<AccordionContent>
-						Yes. It&apos;s animated by default, but you can disable it if you
-						prefer.
+						Placing an order with us is easy! You can chat direct with our
+						whatsapp from website. Alternatively, you can contact our sales team
+						directly via phone or email to discuss your requirements and place
+						an order.
+					</AccordionContent>
+				</AccordionItem>
+				<AccordionItem value="item-4">
+					<AccordionTrigger>
+						Do you offer bulk discounts for educational institutions?
+					</AccordionTrigger>
+					<AccordionContent>
+						Yes, we offer competitive pricing and discounts for bulk orders from
+						educational institutions. Contact us to discuss your specific
+						requirements and pricing options.
+					</AccordionContent>
+				</AccordionItem>
+				<AccordionItem value="item-5">
+					<AccordionTrigger>
+						What are the warranty terms for your equipment?
+					</AccordionTrigger>
+					<AccordionContent>
+						We stand behind the quality of our products. Most of our equipment
+						comes with a standard manufacturer's warranty. Please refer to the
+						product description or contact us for specific warranty details.
+					</AccordionContent>
+				</AccordionItem>
+				<AccordionItem value="item-6">
+					<AccordionTrigger>
+						Do you offer installation services for your equipment?
+					</AccordionTrigger>
+					<AccordionContent>
+						Yes, we provide installation services for many of our products.
+						Please contact us for more information and to schedule installation
+						assistance
 					</AccordionContent>
 				</AccordionItem>
 			</Accordion>

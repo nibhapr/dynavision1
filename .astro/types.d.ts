@@ -136,11 +136,53 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"astro-components blog.md": {
+	id: "astro-components blog.md";
+  slug: "dso";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"astro-components blog2.md": {
+	id: "astro-components blog2.md";
+  slug: "dso1";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"astro-components blog3.md": {
+	id: "astro-components blog3.md";
+  slug: "dso2";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"astro-components blog4.md": {
+	id: "astro-components blog4.md";
+  slug: "dso4";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"astro-components blog5.md": {
+	id: "astro-components blog5.md";
+  slug: "dso5";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 };
 "docs": {
-"documentation/code-blocks.mdx": {
-	id: "documentation/code-blocks.mdx";
-  slug: "documentation/code-blocks";
+"documentation/ds.mdx": {
+	id: "documentation/ds.mdx";
+  slug: "documentation/ds";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"documentation/dso.mdx": {
+	id: "documentation/dso.mdx";
+  slug: "documentation/dso";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -173,16 +215,9 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"documentation/whatsapp.mdx": {
-	id: "documentation/whatsapp.mdx";
-  slug: "documentation/whatsapp";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".mdx"] };
-"getting-started.mdx": {
-	id: "getting-started.mdx";
-  slug: "getting-started";
+"documentation/workbench.mdx": {
+	id: "documentation/workbench.mdx";
+  slug: "documentation/workbench";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -256,28 +291,42 @@ declare module 'astro:content' {
 "posts": {
 "astro-components copy 4.md": {
 	id: "astro-components copy 4.md";
-  slug: "astro-components-copy-4";
+  slug: "dso";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "astro-components copy 5.md": {
 	id: "astro-components copy 5.md";
-  slug: "whatsapp";
+  slug: "workbench";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "astro-components copy 6.md": {
 	id: "astro-components copy 6.md";
-  slug: "qmanagement";
+  slug: "custombench";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "astro-components copy 7.md": {
 	id: "astro-components copy 7.md";
-  slug: "style-guide";
+  slug: "workbench1";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"astro-components copy 8.md": {
+	id: "astro-components copy 8.md";
+  slug: "dso2";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"astro-components copy 9.md": {
+	id: "astro-components copy 9.md";
+  slug: "meter";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">

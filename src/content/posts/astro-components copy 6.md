@@ -1,6 +1,6 @@
 ---
-title: Queue Management System
-slug: qmanagement
+title: Customized work bench
+slug: custombench
 description: Manage your Queue with you Mobile phone
 category:
   - One
@@ -9,7 +9,7 @@ tags:
   - Astro
   - Jamstack
 pubDate: 2023-09-01
-coverSrc: "../../digiimpact.avif"
+coverSrc: "../../CUSTOM.png"
 coverAlt: AstroVerse-Aliases
 author: VV
 ---

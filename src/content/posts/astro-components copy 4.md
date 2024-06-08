@@ -1,6 +1,7 @@
 ---
-title: tags that make SEO eas
-description: the basic building blocks of any Astro project
+title: Dso -2 channel
+slug: dso
+description: Unofficial Whatsapp API for Developers
 category:
   - One
 tags:
@@ -8,7 +9,7 @@ tags:
   - Astro
   - Jamstack
 pubDate: 2023-09-01
-coverSrc: "../../digiimpact.avif"
-coverAlt: "AstroVerse-Aliases"
+coverSrc: "../../dso2.png"
+coverAlt: AstroVerse-Aliases
 author: VV
 ---

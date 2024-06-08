@@ -1,0 +1,67 @@
+---
+// Import necessary components and utilities
+
+import Layout from "@component/global/Layout/Layout.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { formatDate } from "@util/common";
+
+// getStaticPaths is used to pre-render all routes based on the blog posts
+export async function getStaticPaths() {
+	const blogPosts = await getCollection("blog");
+	return blogPosts.map((post) => ({
+		params: { slug: post.slug },
+		props: { post },
+	}));
+}
+// Get the current post's data
+const { post } = Astro.props;
+const blogPosts: CollectionEntry<"blog">[] = await getCollection("blog");
+const relatedPosts: CollectionEntry<"blog">[] = blogPosts.filter(
+	(blogEntry) => blogEntry.slug !== post.slug
+);
+---
+
+<Layout title="Welcome to My site">
+	<main class="space-y-40 mb-40 pt-24">
+		<section class="bg-white">
+			<div
+				class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
+			>
+				<div class="font-light text-gray-500 sm:text-lg">
+					<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
+						{post.data.title}
+					</h2>
+					<p class="mb-4">{post.data.content}</p>
+					<div class="flex justify-between items-center mt-6">
+						<div class="flex items-center space-x-4">
+							<img
+								class="w-7 h-7 rounded-full"
+								width={32}
+								height={32}
+								src={post.data.avatarSrc}
+								alt={post.data.avatarAlt + " cover"}
+							/>
+							<span class="font-medium">
+								{post.data.author}
+							</span>
+						</div>
+						<span class="text-sm">{formatDate(post.data.pubDate)}</span>
+					</div>
+				</div>
+				<div class="grid grid-cols-2 gap-4 mt-8">
+					<img
+						class="w-full rounded-lg"
+						src={post.data.prodImage}
+						alt="office content 1"
+					/>
+					<img
+						class="mt-4 w-full lg:mt-10 rounded-lg"
+						src={post.data.prodImage2}
+						alt="office content 2"
+					/>
+				</div>
+			</div>
+		</section>
+	</main></Layout
+>

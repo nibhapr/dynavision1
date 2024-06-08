@@ -4,10 +4,14 @@ const blogCollection = defineCollection({
 	type: "content",
 	schema: ({ image }) =>
 		z.object({
+			title: z.string(),
 			role: z.string(),
 			content: z.array(z.string()),
+			pubDate: z.date(),
 			author: z.string(),
-			avatarSrc: image(),
+			avatarSrc: z.string(),
+			prodImage: z.string(),
+			prodImage2: z.string(),
 			avatarAlt: z.string(),
 		}),
 });

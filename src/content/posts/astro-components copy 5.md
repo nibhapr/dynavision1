@@ -1,6 +1,6 @@
 ---
-title: Whatsapp API Integration
-slug: whatsapp
+title: Electronics work bench
+slug: workbench
 description: Unofficial Whatsapp API for Developers
 category:
   - One
@@ -9,7 +9,7 @@ tags:
   - Astro
   - Jamstack
 pubDate: 2023-09-01
-coverSrc: "../../digiimpact.avif"
+coverSrc: "../../workbench.png"
 coverAlt: AstroVerse-Aliases
 author: VV
 ---

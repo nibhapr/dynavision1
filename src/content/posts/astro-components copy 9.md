@@ -1,6 +1,6 @@
 ---
-title: Electrical work bench
-slug: workbench1
+title: Meters
+slug: meter
 description: POS, Digital Menu, Whatsapp order, All in one
 category:
   - One
@@ -9,7 +9,7 @@ tags:
   - Tailwind Css
   - Laravel
 pubDate: 2023-09-01
-coverSrc: "../../ELECTRICAL.png"
+coverSrc: "../../meter.webp"
 coverAlt: AstroVerse-Aliases
 author: VV
 ---
