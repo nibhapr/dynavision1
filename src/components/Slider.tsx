@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import digilink from "../assets/clients/01.svg";
-import digilink1 from "../assets/clients/02.svg";
-import digilink2 from "../assets/clients/03.svg";
-import digilink3 from "../assets/clients/04.svg";
-import digilink4 from "../assets/clients/05.svg";
-import digilink5 from "../assets/clients/06.svg";
+import digilink from "../assets/clients/dso3.png";
+import digilink1 from "../assets/clients/meter.png";
+import digilink2 from "../assets/clients/work2.png";
+import digilink3 from "../assets/clients/work1.png";
+import digilink4 from "../assets/clients/work.png";
+import digilink5 from "../assets/clients/dso.png";
 
 const slides = [
 	digilink,

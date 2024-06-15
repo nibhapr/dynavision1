@@ -152,27 +152,20 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 "astro-components blog3.md": {
 	id: "astro-components blog3.md";
-  slug: "dso2";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"astro-components blog4.md": {
-	id: "astro-components blog4.md";
-  slug: "dso4";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"astro-components blog5.md": {
-	id: "astro-components blog5.md";
-  slug: "dso5";
+  slug: "meter";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 };
 "docs": {
+"documentation/custombench.mdx": {
+	id: "documentation/custombench.mdx";
+  slug: "documentation/custombench";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "documentation/ds.mdx": {
 	id: "documentation/ds.mdx";
   slug: "documentation/ds";
@@ -187,9 +180,23 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"documentation/dso2.mdx": {
+	id: "documentation/dso2.mdx";
+  slug: "documentation/dso2";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "documentation/index.mdx": {
 	id: "documentation/index.mdx";
   slug: "documentation";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"documentation/meter.mdx": {
+	id: "documentation/meter.mdx";
+  slug: "documentation/meter";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -218,6 +225,13 @@ declare module 'astro:content' {
 "documentation/workbench.mdx": {
 	id: "documentation/workbench.mdx";
   slug: "documentation/workbench";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"documentation/workbench1.mdx": {
+	id: "documentation/workbench1.mdx";
+  slug: "documentation/workbench1";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

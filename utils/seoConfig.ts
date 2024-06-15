@@ -1,27 +1,62 @@
+import { Description, Title } from "@radix-ui/react-dialog";
+import { Video } from "lucide-react";
 import type { ManifestOptions } from "vite-plugin-pwa";
 
 export const seoConfig = {
-	baseURL: "https://digiimpact.in", // Change this to your production URL.
+	Title: "Digital oscilloscope distributor and manufacturer in india",
+	baseURL: "https://digiimpact.tech",
+	canonical: "https://digiimpact.tech", // Change this to your production URL.
 	description:
-		"Boosting businesses in Kerala, with top-tier web design, digital marketing, and app development services. Dominate online with our expert SEO strategies.",
+		"Quality educational tools distributed India. From labs to classrooms, we provide essential supplies for effective teaching and learning.",
 	type: "website",
 	image: {
-		url: "https://digiimpact.in/digiimpact.jpg", // Change this to your website's thumbnail.
+		url: "https://digiimpact.tech/oscilloscope.webp", // Change this to your website's thumbnail.
 		alt: "OpenGraph thumbnail description.", // Change this to your website's thumbnail description.
 		width: 1200,
 		height: 630,
 	},
-	siteName: "Digiimapct|Let's build your vision together ", // Change this to your website's name,
+	siteName: "Digiimapct|Quality Educational equipment tools",
+	openGraph: {
+		basic: {
+			title: "Digital oscilloscope distributor and manufacturer in india",
+			type: "Website",
+			image: {
+				url: "https://digiimpact.tech/oscilloscope.webp", // Change this to your website's thumbnail.
+				alt: "OpenGraph thumbnail description.", // Change this to your website's thumbnail description.
+				width: 1200,
+				height: 630,
+			},
+		},
+		optional: {
+			siteName: "Digiimpact",
+			description:
+				"Quality educational tools distributed India. From labs to classrooms, we provide essential supplies for effective teaching and learning.",
+			video: {
+				url: "https://youtu.be/iXoD66f3-EI",
+				alt: "Educational equipment distributor",
+				width: 1280,
+				height: 720,
+			},
+		},
+	}, // Change this to your website's name,
+
 	twitter: {
 		card: "summary_large_image",
+		site: "Digiimpact",
+		creator: "Digiimpact",
+		title: "Digital oscilloscope distributor and manufacturer in india",
+		description:
+			"Quality educational tools distributed India. From labs to classrooms, we provide essential supplies for effective teaching and learning.",
+		image: "https://digiimpact.tech/oscilloscope.webp",
+		imageAlt: "Educational equipment distributor",
 	},
 };
 
 export const manifest: Partial<ManifestOptions> = {
 	name: "Digiimpact",
-	short_name: "Digital Marketing",
+	short_name: "Educational equipment",
 	description:
-		"Transforming web design with Next.js, React,Vue.js and Astro. Elevate your online presence with our cutting-edge technologies.", // Change this to your websites description.
+		"Quality educational tools distributed India. From labs to classrooms, we provide essential supplies for effective teaching and learning.", // Change this to your websites description.
 	theme_color: "#30E130",
 	background_color: "#ffffff",
 	display: "minimal-ui",

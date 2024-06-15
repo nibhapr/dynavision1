@@ -4,10 +4,13 @@ import "@style/tailwind.css";
 import { seoConfig } from "@util/seoConfig";
 import Header from "../Header/Header.astro";
 import FooterSection from "@component/FooterSection.astro";
+import Whatsapp from "@component/Whatsapp";
 
 export interface Props {
 	title: string;
+	site?: string;
 	ogTitle?: string;
+	siteName?: string;
 	description?: string;
 	image?: {
 		url: string;
@@ -18,8 +21,9 @@ export interface Props {
 
 const {
 	title,
-	ogTitle,
+	siteName,
 	description,
+	site,
 	image,
 	disableIndexing = false,
 } = Astro.props as Props;
@@ -29,25 +33,34 @@ const {
 	<head>
 		<!-- SEO. -->
 		<SEO
-			title={title}
-			description={seoConfig.description || description}
+			title={title ?? seoConfig.Title}
+			description={description ?? seoConfig.description}
 			noindex={disableIndexing}
 			nofollow={disableIndexing}
 			openGraph={{
 				basic: {
-					title: ogTitle || title,
+					title: title ?? seoConfig.Title,
 					type: "website",
-					image: seoConfig.image.url || image.url,
+					image: image?.url ?? seoConfig.openGraph.basic.image?.url,
 				},
 				image: {
 					width: seoConfig.image.width,
 					height: seoConfig.image.height,
-					alt: seoConfig.image.alt || image.alt,
+					alt: image?.alt ?? seoConfig.openGraph.basic.image?.alt,
 				},
 				optional: {
-					siteName: seoConfig.siteName,
-					description: seoConfig.description || description,
+					siteName: siteName ?? seoConfig.openGraph.optional.siteName,
+					description: description ?? seoConfig.openGraph.optional.description,
 				},
+			}}
+			twitter={{
+				card: "summary_large_image",
+				site: site ?? seoConfig.twitter.site,
+				creator: "Digiimpact",
+				title: title ?? seoConfig.twitter.title,
+				description: description ?? seoConfig.twitter.description,
+				image: image?.url ?? seoConfig.twitter.image,
+				imageAlt: "Educational equipment distributor",
 			}}
 		/>
 
@@ -148,6 +161,7 @@ const {
 		</main>
 
 		<script></script>
+		<Whatsapp client:load />
 		<FooterSection />
 	</body>
 </html>

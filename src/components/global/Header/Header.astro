@@ -9,7 +9,7 @@ import { Image } from "astro:assets";
 
 <header
 	id="navbar"
-	class="bg-lime-300 text-black backdrop-blur transition-all duration-300 shadow-lg h-24 hidden md:flex sticky top-0 z-10 px-8"
+	class="bg-blue-400 text-black backdrop-blur transition-all duration-300 shadow-lg h-24 hidden md:flex sticky top-0 z-10 px-8"
 >
 	<a
 		href="https://digiimpact.in"
@@ -24,7 +24,7 @@ import { Image } from "astro:assets";
 	</a>
 
 	<nav class="header-links contents font-semibold text-base lg:text-lg">
-		<ul class="flex items-center ml-4 xl:ml-8 mr-auto">
+		<ul class="flex items-center ml-12 xl:ml-16 mr-auto">
 			{navBarLinks.map((link) => <NavLink url={link.url} name={link.name} />)}
 		</ul>
 	</nav>

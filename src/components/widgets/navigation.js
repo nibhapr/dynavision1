@@ -11,37 +11,31 @@ export const socialLinks = {
 };
 export const navBarLinks = [
 	{ name: "Home", url: "/" },
-	{ name: "pricing", url: "/pricing" },
-
 	{ name: "Blog", url: "/blogs" },
 	{ name: "Contact", url: "/contact" },
 ];
 export const footerData = {
 	links: [
 		{
-			title: "Product",
+			title: "Menus",
 			links: [
-				{ text: "Features", href: "#contact" },
-				{ text: "Team", href: "about" },
-				{ text: "Home", href: "product" },
-				{ text: "Resources", href: "blog" },
+				{ text: "Home", href: "/" },
+				{ text: "Blog", href: "blogs" },
+				{ text: "Contact", href: "contact" },
 			],
 		},
 
 		{
-			title: "Company",
+			title: "Products",
 			links: [
-				{ text: "About", href: "about" },
-				{ text: "Blog", href: "blog" },
+				{ text: "Digital Oscilloscope" },
+				{ text: "Meters" },
 				// { text: 'Careers', href: '#' },
-				{ text: "Contact", href: "contact" },
+				{ text: "Customized Work Benches" },
 			],
 		},
 	],
-	// secondaryLinks: [
-	// 	{ text: "Terms", href: getPermalink("/terms") },
-	// 	{ text: "Privacy Policy", href: getPermalink("/privacy") },
-	// ],
+
 	socialLinks: [
 		{ ariaLabel: "X", icon: "tabler:brand-x", href: "#" },
 		{ ariaLabel: "Instagram", icon: "tabler:brand-instagram", href: "#" },

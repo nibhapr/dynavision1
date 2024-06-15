@@ -1,17 +1,9 @@
 ---
-import DocsLayout from "@component/layout/docs-layout.astro";
-import DocsSidebarNav from "@/components/layout/sidebar-nav.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
-import DocsPager from "@/components/pager.astro";
 import { Icon } from "astro-icon/components";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { Layout } from "@globals";
 import DocsPageHeader from "@/components/page-header.astro";
-import { docsConfig } from "@/config/docs";
 import { MdxComponents } from "@/content/mdx-components";
-import { getTableOfContents } from "@util/common";
-import Header from "@component/global/Header/Header.astro";
-import FooterSection from "@component/FooterSection.astro";
-
 export async function getStaticPaths() {
 	const docs = await getCollection("docs");
 	return docs.map((doc) => ({
@@ -34,8 +26,7 @@ if (!slug || !doc) {
 }
 ---
 
-<Header />
-<DocsLayout title={doc.data.title} description={doc.data.description}>
+<Layout title={doc.data.title} description={doc.data.description}>
 	<div class="container flex-1">
 		<div
 			class="flex-1 md:grid md:grid-cols-[220px_1fr] md:gap-6 lg:grid-cols-[240px_1fr] lg:gap-10"
@@ -43,9 +34,6 @@ if (!slug || !doc) {
 			<aside
 				class="fixed top-14 z-30 -ml-2 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 md:sticky md:block"
 			>
-				<!-- <ScrollArea className="h-full py-6 pr-6 lg:py-8" client:load>
-					<DocsSidebarNav items={docsConfig.sidebarNav} />
-				</ScrollArea> -->
 			</aside>
 			<main
 				class="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]"
@@ -79,5 +67,4 @@ if (!slug || !doc) {
 			</main>
 		</div>
 	</div>
-</DocsLayout>
-<FooterSection />
+</Layout>

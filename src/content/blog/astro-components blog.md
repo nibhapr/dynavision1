@@ -13,9 +13,9 @@ title: Customized Electrical and Electronic Workbenches
 role: g
 slug: dso
 description: Customized Electrical and Electronic Workbenches
-author: Abdul Gafoor
+author: Rashid
 pubDate: 2023-09-01
-avatarSrc: "/gafoor.png"
+avatarSrc: "/rashid.png"
 prodImage: "/eletrical.png"
 prodImage2: "/CUSTOM.png"
 avatarAlt: AstroVerse-Aliases

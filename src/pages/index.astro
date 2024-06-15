@@ -1,5 +1,4 @@
 ---
-import FeatureComponents from "@component/FeatureComponents.astro";
 import Hero from "@component/Hero.astro";
 import Slider from "@component/Slider";
 import PostCard from "@component/CommonCard.astro";
@@ -7,7 +6,6 @@ import { Layout } from "@globals";
 import { getCollection } from "astro:content";
 import Pagination from "@component/Pagination.astro";
 import ServiceAstro from "@component/ServiceAstro.astro";
-import FooterSection from "@component/FooterSection.astro";
 import Faq from "@component/widgets/Faq";
 import TitleComponents from "@component/TitleComponents.astro";
 const allPosts = await getCollection("posts");
@@ -16,11 +14,9 @@ const totalPages = Math.ceil(allPosts.length / postsPerPage);
 const basePath = "/posts/";
 ---
 
-<Layout title="Website design in Ernakulam">
+<Layout title="Digital oscilloscope distributor and manufacturer in india">
 	<Hero />
 	<Slider client:load />
-	<!-- <TitleComponents title="Our Services" /> -->
-	<!-- <FeatureComponents /> -->
 	<ServiceAstro />
 	<TitleComponents title="Our Products" />
 

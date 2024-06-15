@@ -9,7 +9,7 @@ tags:
   - Astro
   - Jamstack
 pubDate: 2023-09-01
-coverSrc: "../../workbench.png"
+coverSrc: "../../eletrical.png"
 coverAlt: AstroVerse-Aliases
 author: VV
 ---
