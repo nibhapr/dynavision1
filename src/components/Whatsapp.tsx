@@ -9,7 +9,7 @@ const Whatsapp = () => {
 			phoneNumber="+919747745544"
 			avatar={logoUrl}
 			statusMessage="Live chat now"
-			chatMessage="Welcome to Educational Equipent Supply 🤝. How can we help?"
+			chatMessage="Welcome to Educational Equipment Supply 🤝. How can we help?"
 		/>
 	);
 };
