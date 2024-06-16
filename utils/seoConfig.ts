@@ -1,5 +1,3 @@
-import { Description, Title } from "@radix-ui/react-dialog";
-import { Video } from "lucide-react";
 import type { ManifestOptions } from "vite-plugin-pwa";
 
 export const seoConfig = {
