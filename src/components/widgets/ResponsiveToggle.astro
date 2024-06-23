@@ -1,26 +1,29 @@
-<button id="collapseBtn"  aria-expanded="false" aria-label="Open menu navigation" class="border-1 p-4">
-  <svg width="26" height="21" aria-hidden="true" fill="#000000" xmlns="http://www.w3.org/2000/svg"
-    ><path
-      d="M2 1.667h24m-24 8h24m-24 8h 24"
-      stroke="#000"
-      stroke-width="2.667"
-      stroke-linecap="round"
-      stroke-linejoin="round"></path>
-      </svg
-  >
- 
+<button
+	id="collapseBtn"
+	aria-expanded="false"
+	aria-label="Open menu navigation"
+	class="border-1 p-4"
+>
+	<svg
+		width="26"
+		height="21"
+		aria-hidden="true"
+		fill="#000000"
+		xmlns="http://www.w3.org/2000/svg"
+		><path
+			d="M2 1.667h24m-24 8h24m-24 8h 24"
+			stroke="#000"
+			stroke-width="2.667"
+			stroke-linecap="round"
+			stroke-linejoin="round"></path>
+	</svg>
 </button>
 
-
-
 <script>
-  const collapseButton = document.getElementById('collapseBtn');
-  const collapsibleContent = document.getElementById('collapseContent');
+	const collapseButton = document.getElementById("collapseBtn");
+	const collapsibleContent = document.getElementById("collapseContent");
 
-  collapseButton!.addEventListener('click', () => {
-      collapsibleContent!.classList.toggle('hidden');
-  });
+	collapseButton!.addEventListener("click", () => {
+		collapsibleContent!.classList.toggle("hidden");
+	});
 </script>
-
-
-

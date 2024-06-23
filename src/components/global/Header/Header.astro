@@ -123,8 +123,10 @@ import { Image } from "astro:assets";
 			<ResponsiveToggle />
 		</div>
 	</div>
-	<div id="collapseContent" class="hidden">
-		<ul class="items-center ml-4 xl:ml-8 mr-auto transition-all text-black">
+	<div id="collapseContent" class="transition-all duration-500">
+		<ul
+			class="items-center ml-4 xl:ml-8 mr-auto transition-all duration-500 text-black"
+		>
 			{navBarLinks.map((link) => <NavLink url={link.url} name={link.name} />)}
 		</ul>
 	</div>

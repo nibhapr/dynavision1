@@ -27,11 +27,41 @@ const {
 	image,
 	disableIndexing = false,
 } = Astro.props as Props;
+const structuredData = {
+	"@context": "http://schema.org",
+	"@type": "Educational equipment distribution",
+	name: "Digital oscilloscope",
+	url: "https://digiimpact.tech",
+	logo: "https://digiimpact.tech/oscilloscope.webp",
+	description:
+		description ??
+		"Quality educational tools distributed India. From labs to classrooms, we provide essential supplies for effective teaching and learning.",
+	address: {
+		"@type": "PostalAddress",
+		streetAddress: "1555/4 Office -Royal Plaza Building Periyar Nagar",
+		addressLocality: "Aluva",
+		addressRegion: "Ernakulam",
+		postalCode: "683101",
+		addressCountry: "IN",
+	},
+	contactPoint: {
+		"@type": "ContactPoint",
+		telephone: "+919747745544",
+		contactType: "Sales",
+	},
+};
 ---
 
 <html lang="en">
 	<head>
-		<!-- SEO. -->
+		{
+			structuredData && (
+				<script
+					type="application/ld+json"
+					set:html={JSON.stringify(structuredData)}
+				/>
+			)
+		}
 		<SEO
 			title={title ?? seoConfig.Title}
 			description={description ?? seoConfig.description}
