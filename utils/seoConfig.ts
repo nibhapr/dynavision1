@@ -51,6 +51,28 @@ export const seoConfig = {
 		image: "https://digiimpact.tech/oscilloscope.webp",
 		imageAlt: "Educational equipment distributor",
 	},
+	structuredData: {
+		"@context": "http://schema.org",
+		"@type": "EducationalOrganization",
+		name: "Digiimpact",
+		url: "https://digiimpact.tech",
+		logo: "https://digiimpact.tech/logodigi.jpg",
+		description:
+			"Quality educational tools distributed in India. From labs to classrooms, we provide essential supplies for effective teaching and learning.", // Fixed description value
+		address: {
+			"@type": "PostalAddress",
+			streetAddress: "1555/4 Office -Royal Plaza Building Periyar Nagar",
+			addressLocality: "Aluva",
+			addressRegion: "Ernakulam",
+			postalCode: "683101",
+			addressCountry: "IN",
+		},
+		contactPoint: {
+			"@type": "ContactPoint",
+			telephone: "+919747745544",
+			contactType: "Sales",
+		},
+	},
 };
 
 export const manifest: Partial<ManifestOptions> = {

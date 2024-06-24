@@ -8,6 +8,7 @@ import Whatsapp from "@component/Whatsapp";
 
 export interface Props {
 	title: string;
+	structuredData?: object;
 	publishedTime?: string;
 	site?: string;
 	ogTitle?: string;
@@ -23,48 +24,19 @@ export interface Props {
 const {
 	title,
 	siteName,
+	structuredData,
 	publishedTime,
 	description,
 	site,
 	image,
 	disableIndexing = false,
 } = Astro.props as Props;
-
-const structuredData = {
-	"@context": "http://schema.org",
-	"@type": "EducationalOrganization",
-	name: "Digiimpact",
-	url: "https://digiimpact.tech",
-	logo: "https://digiimpact.tech/logodigi.jpg",
-	description:
-		"Quality educational tools distributed in India. From labs to classrooms, we provide essential supplies for effective teaching and learning.", // Fixed description value
-	address: {
-		"@type": "PostalAddress",
-		streetAddress: "1555/4 Office -Royal Plaza Building Periyar Nagar",
-		addressLocality: "Aluva",
-		addressRegion: "Ernakulam",
-		postalCode: "683101",
-		addressCountry: "IN",
-	},
-	contactPoint: {
-		"@type": "ContactPoint",
-		telephone: "+919747745544",
-		contactType: "Sales",
-	},
-};
 ---
 
 <html lang="en">
 	<head>
-		{
-			structuredData && (
-				<script
-					type="application/ld+json"
-					set:html={JSON.stringify(structuredData)}
-				/>
-			)
-		}
 		<SEO
+			structuredData={structuredData ?? seoConfig.structuredData}
 			title={title ?? seoConfig.Title}
 			description={description ?? seoConfig.description}
 			noindex={disableIndexing}
