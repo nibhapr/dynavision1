@@ -8,6 +8,7 @@ import Whatsapp from "@component/Whatsapp";
 
 export interface Props {
 	title: string;
+	publishedTime?: string;
 	site?: string;
 	ogTitle?: string;
 	siteName?: string;
@@ -22,6 +23,7 @@ export interface Props {
 const {
 	title,
 	siteName,
+	publishedTime,
 	description,
 	site,
 	image,
@@ -30,13 +32,12 @@ const {
 
 const structuredData = {
 	"@context": "http://schema.org",
-	"@type": "Educational equipment distribution",
+	"@type": "EducationalOrganization",
 	name: "Digiimpact",
 	url: "https://digiimpact.tech",
 	logo: "https://digiimpact.tech/logodigi.jpg",
 	description:
-		description ??
-		"Quality educational tools distributed India. From labs to classrooms, we provide essential supplies for effective teaching and learning.",
+		"Quality educational tools distributed in India. From labs to classrooms, we provide essential supplies for effective teaching and learning.", // Fixed description value
 	address: {
 		"@type": "PostalAddress",
 		streetAddress: "1555/4 Office -Royal Plaza Building Periyar Nagar",
@@ -82,6 +83,11 @@ const structuredData = {
 				optional: {
 					siteName: siteName ?? seoConfig.openGraph.optional.siteName,
 					description: description ?? seoConfig.openGraph.optional.description,
+				},
+
+				article: {
+					publishedTime:
+						publishedTime ?? seoConfig.openGraph.article.publishedTime,
 				},
 			}}
 			twitter={{

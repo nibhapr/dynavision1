@@ -36,6 +36,9 @@ export const seoConfig = {
 				height: 720,
 			},
 		},
+		article: {
+			publishedTime: "2024-06-24T15:30:00Z",
+		},
 	}, // Change this to your website's name,
 
 	twitter: {

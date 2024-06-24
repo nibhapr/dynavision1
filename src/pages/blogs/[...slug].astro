@@ -22,7 +22,7 @@ const relatedPosts: CollectionEntry<"blog">[] = blogPosts.filter(
 );
 ---
 
-<Layout title="Welcome to My site">
+<Layout title={post.data.title} description={post.data.description}>
 	<main class="space-y-40 mb-40 pt-24">
 		<section class="bg-white">
 			<div

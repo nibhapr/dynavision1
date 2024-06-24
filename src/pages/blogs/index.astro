@@ -10,9 +10,11 @@ const articlesData: CollectionEntry<"blog">[] = (
 	(a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
 		b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+const Blogtitle =
+	"Best Oscilloscope distributor with reasonable rate in kerala,India";
 ---
 
-<Layout title="Astro PWA Starter">
+<Layout title={Blogtitle}>
 	<main class="space-y-20">
 		<div class="max-w-screen-xl mx-auto px-6 md:px-14 xl:px-14">
 			<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">

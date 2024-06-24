@@ -26,7 +26,11 @@ if (!slug || !doc) {
 }
 ---
 
-<Layout title={doc.data.title} description={doc.data.description}>
+<Layout
+	title={doc.data.title}
+	description={doc.data.description}
+	publishedTime={doc.data.publishedTime}
+>
 	<div class="container flex-1">
 		<div
 			class="flex-1 md:grid md:grid-cols-[220px_1fr] md:gap-6 lg:grid-cols-[240px_1fr] lg:gap-10"

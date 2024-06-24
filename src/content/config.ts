@@ -9,6 +9,8 @@ const blogCollection = defineCollection({
 			role: z.string(),
 			content: z.array(z.string()),
 			pubDate: z.date(),
+			publishedTime: z.string(),
+			modifiedTime: z.string(),
 			author: z.string(),
 			avatarSrc: z.string(),
 			prodImage: z.string(),
@@ -56,6 +58,8 @@ const docs = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		description: z.string(),
+		publishedTime: z.string(),
+		modifiedTime: z.string(),
 	}),
 });
 export const collections = {

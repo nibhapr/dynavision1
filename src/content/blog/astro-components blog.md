@@ -15,6 +15,8 @@ slug: dso
 description: Customized Electrical and Electronic Workbenches
 author: Rashid
 pubDate: 2023-09-01
+publishedTime: "2024-06-24T15:30:00Z"
+modifiedTime: "2024-07-23T15:30:00Z"
 avatarSrc: "/rashid.png"
 prodImage: "/eletrical.png"
 prodImage2: "/CUSTOM.png"
