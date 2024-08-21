@@ -8,6 +8,11 @@ import {
 export default function Faq() {
 	return (
 		<div className="max-w-7xl w-full mx-auto p-8 mt-8 bg-slate-50 rounded shadow">
+			<div className="mx-auto mb-12 w-full space-y-1 text-center sm:w-1/2 lg:w-1/3">
+				<h2 className="text-balance text-2xl font-bold leading-tight text-neutral-800 dark:text-neutral-200 sm:text-3xl fade-in-up-bounce">
+					FAQ
+				</h2>
+			</div>
 			<Accordion type="single" collapsible className="w-full">
 				<AccordionItem value="item-1">
 					<AccordionTrigger>

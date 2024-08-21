@@ -19,7 +19,16 @@ const Slider = () => {
 	const duplicatedSlides = [...slides, ...slides];
 
 	return (
-		<div className="relative w-full overflow-hidden mb-8 ">
+		<div className="relative w-full overflow-hidden mb-12 mt-12 ">
+			<div className="mx-auto mb-12 w-full space-y-1 text-center sm:w-1/2 lg:w-1/3 md:p-0 p-5">
+				<h2 className="text-balance text-2xl font-bold leading-tight text-neutral-800 sm:text-3xl fade-in-up-bounce">
+					Trusted by Leading Brands
+				</h2>
+				<p className="text-pretty leading-tight text-neutral-600 fade-in-up-bounce-delayed">
+					Leading brands, delivering excellence and innovation in our services.
+				</p>
+			</div>
+
 			<motion.div
 				className="flex items-center gap-x-4"
 				initial={{ x: "-50%" }}

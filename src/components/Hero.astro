@@ -10,10 +10,19 @@ import BackgroundBeams from "./BackgroundBeams";
 		class="relative flex flex-col-reverse items-center md:flex-row"
 		id="hero"
 	>
-		<div class="row items-center py-5 md:w-6/12 md:pb-20 md:pt-10">
+		<div class="flex items-center py-5 md:w-6/12 md:pb-20 md:pt-10 fadeInLeft">
+			<Image
+				src={img}
+				loading="eager"
+				alt="Digiimpact Kerala"
+				loading="eager"
+				class="rounded-2xl"
+			/>
+		</div>
+		<div class="row items-center py-5 md:w-6/12 md:pb-20 md:pt-10 autoShow">
 			<div class="text-left space-y-3">
-				<h1 class="text-5xl font-medium leading-none md:text-6xl">
-					Distributor of<br />electronic testing devices <br /> and oscilloscopes.
+				<h1 class="text-5xl font-medium leading-none md:text-4xl">
+					Distributor of electronic testing devices and oscilloscopes.
 				</h1>
 				<p class="mt-6 mb-8 text-xl font-normal leading-7 sm:mb-12">
 					Capture and analyze electronic waveforms with our digital
@@ -22,19 +31,59 @@ import BackgroundBeams from "./BackgroundBeams";
 					troubleshooting.
 				</p>
 				<Button
-					className="p-8 border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex text-xl font-normal leading-7"
+					className="p-6 border rounded-xl justify-items-center md:justify-items-start gap-2.5 inline-flex text-base font-normal leading-7"
 					variant="secondary"
-					><a href="/contact"> Book a consultation </a></Button
 				>
+					<a href="/contact"> Book a consultation </a>
+				</Button>
 			</div>
-		</div>
-		<div class="flex items-center py-5 md:w-6/12 md:pb-20 md:pt-10">
-			<Image
-				src={img}
-				loading="eager"
-				alt="Digiimpact Kerala"
-				loading="eager"
-			/>
 		</div>
 	</div>
 </div>
+
+<style>
+	.autoShow {
+		animation: autoShowAnimation both;
+		animation-timeline: view(70% 5%);
+	}
+
+	@keyframes autoShowAnimation {
+		from {
+			opacity: 0;
+			transform: translateY(200px) scale(0.3);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+	}
+
+	.autoRotate {
+		animation: autoRotateAnimation;
+		animation-timeline: view();
+	}
+	@keyframes autoRotateAnimation {
+		from {
+			transform: rotate(90deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.fadeInLeft {
+		animation: fadeInLeftAnimation;
+		animation-timeline: view();
+	}
+
+	@keyframes fadeInLeftAnimation {
+		from {
+			opacity: 0;
+			transform: translateX(-100px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+</style>

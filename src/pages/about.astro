@@ -1,0 +1,338 @@
+---
+// Importing necessary components
+
+import Container from "@component/container.astro";
+
+// Define props from Astro
+const {
+	title = ["Why Choose Lovosis?"],
+	subTitle = [
+		"Expert custom fabrication and surveillance solutions tailored to your unique security and technological needs.",
+	],
+	benefits = [
+		"Unparalleled Expertise in Surveillance Technology",
+		"Satisfied Customers and High-quality Solutions",
+		"Tailored IT Solutions & Custom Fabrication Solution",
+		"Advanced Fastening Technology for Quick Installation",
+		"Dedicated Support and Maintenance Services",
+	],
+} = Astro.props;
+
+// Define TypeScript interface for props
+interface Props {
+	title: string;
+	subTitle?: string;
+	benefits?: Array<string>;
+}
+
+const abtitle: string = "About us";
+const absubTitle: string =
+	"Discover Lovosis, Dubai's authorized supplier of customized fabrication and surveillance solutions";
+
+// Define props from Astro
+const {
+	Abouttitle = [
+		`Know About <span class="text-blue-600 dark:text-teal-600">lovosis</span>`,
+	],
+	AboutsubTitle = "At Lovosis, we specialize in cutting-edge surveillance and IT solutions, positioned as a leading provider in Dubai. Our expertise focuses on delivering robust security and technological efficiency to our clients. While we offer custom fabrication, our core strength lies in comprehensive surveillance systems designed to meet diverse and dynamic needs. we are proud to serve over 7k+ customers as Dubai's premier provider of advanced surveillance and IT solutions. Additionally, we speed up assembly with our advanced fastening solutions, ensuring that our installations are completed at twice the usual speed, providing efficiency alongside security. Trust Lovosis to enhance and secure your digital landscape with precision and innovation.",
+} = Astro.props;
+
+// Define TypeScript interface for props
+interface Props {
+	Abouttitle: string;
+	AboutsubTitle?: string;
+	AboutprimaryBtn?: string;
+	AboutprimaryBtnURL?: string;
+}
+
+// Define SVG marker to be used in the component
+const ListItemMarker: string = `<svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mt-0.5 h-6 w-6 text-blue-600 dark:text-teal-600 flex-none"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`;
+---
+
+<style>
+	.autoRotate {
+		animation: autoRotateAnimation;
+		animation-timeline: view();
+	}
+	@keyframes autoRotateAnimation {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.autoShow {
+		animation: autoShowAnimation both;
+		animation-timeline: view(70% 5%);
+	}
+
+	@keyframes autoShowAnimation {
+		from {
+			opacity: 0;
+			transform: translateY(200px) scale(0.3);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+	}
+
+	.fadeInRight {
+		animation: fadeInRightAnimation;
+		animation-timeline: view();
+	}
+
+	@keyframes fadeInRightAnimation {
+		from {
+			opacity: 0;
+			transform: translateX(100px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+</style>
+
+<Container
+	title="About"
+	structuredData={{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"@id": "https://lovosis.com/about",
+		url: "https://lovosis.com/about",
+		name: "About | Lovosis",
+		description:
+			"Discover Lovosis, Dubai's authorized supplier of top-quality building materials. Learn about our commitment to excellence in the UAE construction industry.",
+		isPartOf: {
+			"@type": "WebSite",
+			url: "https://lovosis.com",
+			name: "Lovosis",
+			description:
+				"Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates.",
+		},
+		inLanguage: "en-US",
+	}}
+>
+	<section
+		class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+	>
+		<div
+			class="text-center bg-gray-100 dark:bg-neutral-500 p-5 md:p-12 rounded-2xl mb-20"
+		>
+			<h1
+				class="text-balance animate-fade-in-left text-3xl md:text-6xl md:leading-tight font-bold tracking-tight text-neutral-800 dark:text-neutral-100"
+			>
+				{abtitle}
+			</h1>
+			<p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-200">
+				{absubTitle}
+			</p>
+		</div>
+
+		<div
+			class="mx-auto grid gap-4 px-4 mb-24 md:mb-14 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full"
+		>
+			<!-- Title and description -->
+			<div>
+				<div class="autoShow">
+					<div
+						class="col-span-full h-5/2 pb-12 md:pt-5 pt-8 w-full rounded-xl bg-neutral-100 dark:bg-white/[.075] sm:h-3/4 lg:col-span-7 lg:col-start-6 lg:h-full"
+					>
+						<!-- Each h1 and p tag renders a portion of the title and subTitle defined above -->
+						<h2
+							class="block text-balance text-3xl px-5 font-bold tracking-tight text-neutral-800 dark:text-neutral-200 sm:text-4xl lg:text-6xl lg:leading-tight"
+						>
+							<!-- About Fragment: https://docs.astro.build/en/basics/astro-syntax/#fragments -->
+							<Fragment set:html={Abouttitle} />
+						</h2>
+						{
+							AboutsubTitle && (
+								<p class="mt-5 text-pretty text-base px-5 leading-relaxed text-neutral-700 dark:text-neutral-400 w-11/12">
+									{AboutsubTitle}
+								</p>
+							)
+						}
+					</div>
+				</div>
+			</div>
+
+			<!-- About Image Section -->
+			<div
+				class="flex w-full bg-gray-800 fadeInRight dark:bg-gray-400 p-5 rounded-2xl justify-center items-center md:items-center"
+			>
+				<div
+					class="lg:col-span-3 lg:col-end-10 lg:mt-0 p-3 bg-gray-600 dark:bg-gray-200 rounded-xl"
+				>
+					<div class="space-y-6 sm:space-y-8">
+						<img
+							src="/pictures/logo.png"
+							alt="hero-image"
+							class="w-full h-auto"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Grid -->
+		<div
+			class="lg:grid pb-16 md:pt-10 lg:grid-cols-12 lg:items-center lg:gap-16"
+		>
+			<div class="lg:col-span-6">
+				<div class="relative h-full w-full flex items-center justify-center">
+					<div
+						class="profileCard_container relative p-9 md:p-12 border-2 border-dashed rounded-full border-spacing-4 border-blue-600"
+					>
+						<button
+							class="profile_item left-[25px] -top-[26px] absolute rounded-full bg-cover cursor-pointer border border-teal-600 p-[2px] active:scale-95 hover:scale-150 transition-all duration-500"
+						>
+							<span
+								class="block w-[70px] h-[70px] transition-all duration-500 rounded-full z-[2] bg-white p-1"
+							>
+								<img
+									src="/pictures/logo.png"
+									alt="hero-image"
+									class="w-full h-auto mt-5"
+								/>
+							</span>
+						</button>
+
+						<button
+							class="profile_item right-[25px] -top-[28px] absolute rounded-full bg-cover cursor-pointer border border-teal-600 p-[2px] active:scale-95 hover:scale-150 transition-all duration-500"
+						>
+							<span
+								class="block w-[70px] h-[70px] transition-all duration-500 rounded-full z-[2] bg-white p-1"
+							>
+								<img
+									src="/pictures/logo.png"
+									alt="hero-image"
+									class="w-full h-auto mt-5"
+								/>
+							</span>
+						</button>
+
+						<button
+							class="profile_item -left-11 top-24 absolute rounded-full bg-cover cursor-pointer border border-teal-600 p-[2px] active:scale-95 hover:scale-150 transition-all duration-500"
+						>
+							<span
+								class="block w-[70px] h-[70px] transition-all duration-500 rounded-full z-[2] bg-white p-1"
+							>
+								<img
+									src="/pictures/logo.png"
+									alt="hero-image"
+									class="w-full h-auto mt-5"
+								/>
+							</span>
+						</button>
+
+						<button
+							class="profile_item -right-11 top-24 absolute rounded-full bg-cover cursor-pointer border border-teal-600 p-[2px] active:scale-95 hover:scale-150 transition-all duration-500"
+						>
+							<span
+								class="block w-[70px] h-[70px] transition-all duration-500 rounded-full z-[2] bg-white p-1"
+							>
+								<img
+									src="/pictures/logo.png"
+									alt="hero-image"
+									class="w-full h-auto mt-5"
+								/>
+							</span>
+						</button>
+
+						<button
+							class="profile_item -bottom-0 -left-2 absolute rounded-full bg-cover cursor-pointer border border-teal-600 p-[2px] active:scale-95 hover:scale-150 transition-all duration-500"
+						>
+							<span
+								class="block w-[70px] h-[70px] transition-all duration-500 rounded-full z-[2] bg-white p-1"
+							>
+								<img
+									src="/pictures/logo.png"
+									alt="hero-image"
+									class="w-full h-auto mt-5"
+								/>
+							</span>
+						</button>
+
+						<button
+							class="profile_item bottom-0 -right-2 absolute rounded-full bg-cover cursor-pointer border border-teal-600 p-[2px] active:scale-95 hover:scale-150 transition-all duration-500"
+						>
+							<span
+								class="block w-[70px] h-[70px] transition-all duration-500 rounded-full z-[2] bg-white p-1"
+							>
+								<img
+									src="/pictures/logo.png"
+									alt="hero-image"
+									class="w-full h-auto mt-5"
+								/>
+							</span>
+						</button>
+
+						<button
+							class="profile_item right-[35%] -bottom-11 absolute rounded-full bg-cover cursor-pointer border border-teal-600 p-[2px] active:scale-95 hover:scale-150 transition-all duration-500"
+						>
+							<span
+								class="block w-[70px] h-[70px] transition-all duration-500 rounded-full z-[2] bg-white p-1"
+							>
+								<img
+									src="/pictures/logo.png"
+									alt="hero-image"
+									class="w-full h-auto mt-5"
+								/>
+							</span>
+						</button>
+
+						<button
+							class="profile_item w-[200px] h-[200px] p-1 border-2 autoShow rounded-full hover:border-blue-600 cursor-pointer transition-all duration-500 z-0"
+						>
+							<div
+								class="w-full h-full flex items-center justify-center p-2 rounded-full active:scale-95 hover:scale-95 object-cover transition-all duration-500"
+							>
+								<img
+									src="/pictures/logo.png"
+									alt="hero-image"
+									class="w-full h-auto object-cover noRotate"
+								/>
+							</div>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="mt-20 md:mt-0 p-6 md:p-1 sm:mt-10 lg:col-span-5 lg:mt-0">
+				<div class="space-y-6 sm:space-y-8">
+					<div class="space-y-2 md:space-y-4">
+						<h2
+							class="text-balance text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl"
+						>
+							{title}
+						</h2>
+						{
+							subTitle && (
+								<p class="text-pretty text-neutral-600 dark:text-neutral-400">
+									{subTitle}
+								</p>
+							)
+						}
+					</div>
+					{
+						benefits && (
+							<ul class="space-y-2 sm:space-y-4">
+								{benefits.map((item) => (
+									<li class="flex space-x-3">
+										<Fragment set:html={ListItemMarker} />
+										<span class="text-pretty text-base font-medium text-neutral-600 dark:text-neutral-400">
+											{item}
+										</span>
+									</li>
+								))}
+							</ul>
+						)
+					}
+				</div>
+			</div>
+		</div>
+	</section>
+</Container>
