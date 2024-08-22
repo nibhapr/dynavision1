@@ -3,12 +3,13 @@ import Container from "./container.astro";
 import { motion, useInView, useAnimation } from "framer-motion";
 import hikvision from "../assets/img/education.webp";
 import { Image } from "astro:assets";
+import { Button } from "./ui/button";
 ---
 
 <Container>
 	<div class="flex-row items-center my-6 p-4 bg-white rounded">
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-			<div class="justify-start items-center gap-[275px] flex">
+			<div class="autoShow justify-start items-center gap-[275px] flex">
 				<div
 					class="flex-col justify-start items-start gap-[26px] inline-flex text-black"
 				>
@@ -21,19 +22,64 @@ import { Image } from "astro:assets";
 						we craft workbenches that precisely match your specifications for
 						enhanced productivity..
 					</div>
-					<a
-						href="/contact"
-						class="px-[35px] py-5 bg-zinc-900 rounded-[14px] justify-start items-start gap-2.5 inline-flex"
+					<Button
+						className="p-6 border rounded-xl justify-items-center md:justify-items-start gap-2.5 inline-flex text-base font-normal leading-7"
+						variant="secondary"
 					>
-						<div class="text-center text-white text-xl font-normal leading-7">
-							Contact us for quote
-						</div>
-					</a>
+						<a href="/contact"> Contact us for quote </a>
+					</Button>
 				</div>
 			</div>
-			<div class="grid cols-1">
-				<Image src={hikvision} alt="cat" />
+			<div class="grid cols-1 fadeInRight">
+				<Image src={hikvision} alt="cat" class="rounded-2xl" />
 			</div>
 		</div>
 	</div>
+
+	<style>
+		.autoShow {
+			animation: autoShowAnimation both;
+			animation-timeline: view(70% 5%);
+		}
+
+		@keyframes autoShowAnimation {
+			from {
+				opacity: 0;
+				transform: translateY(200px) scale(0.3);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0) scale(1);
+			}
+		}
+
+		.autoRotate {
+			animation: autoRotateAnimation;
+			animation-timeline: view();
+		}
+		@keyframes autoRotateAnimation {
+			from {
+				transform: rotate(90deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
+
+		.fadeInRight {
+			animation: fadeInRightAnimation;
+			animation-timeline: view();
+		}
+
+		@keyframes fadeInRightAnimation {
+			from {
+				opacity: 0;
+				transform: translateX(100px);
+			}
+			to {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+	</style>
 </Container>
