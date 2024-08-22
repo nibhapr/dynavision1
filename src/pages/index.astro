@@ -2,7 +2,6 @@
 import Hero from "@component/Hero.astro";
 import BannerSlider from "@component/BannerSlider";
 import Slider from "@component/Slider";
-import Service from "@component/Service.astro";
 import HomeContact from "@component/HomeContact.astro";
 import PostCard from "@component/CommonCard.astro";
 import { Layout } from "@globals";
@@ -10,8 +9,8 @@ import { getCollection } from "astro:content";
 import Pagination from "@component/Pagination.astro";
 import ServiceAstro from "@component/ServiceAstro.astro";
 import Faq from "@component/widgets/Faq";
-import TitleComponents from "@component/TitleComponents.astro";
 import Service from "@component/Service";
+import TitleComponents from "@component/TitleComponents.astro";
 import HeroSectionAlt from "@component/HeroSectionAlt.astro";
 import TestimonialsSection from "@component/TestimonialsSection.astro";
 const allPosts = await getCollection("posts");
@@ -24,7 +23,6 @@ const basePath = "/posts/";
 	<BannerSlider client:load />
 	<!-- <Hero /> -->
 	<Slider client:load />
-	<Service client:load />
 	<Service client:load />
 	<!-- <ServiceAstro /> -->
 	<TitleComponents title="Our Products" />

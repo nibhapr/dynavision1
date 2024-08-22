@@ -16,6 +16,27 @@ const sliders = [
 	},
 	{
 		id: 2,
+		image: "/banner2.jpg",
+		title: "Comprehensive Robotics Lab Setup for Schools and Colleges",
+		desc: "Equipping schools and colleges with state-of-the-art robotics labs to foster hands-on learning, innovation, and technical skills development in robotics",
+		href: "/Signboards",
+		button: "Learn More",
+	},
+	{
+		id: 3,
+		image: "/banner3.jpg",
+		title: "Advanced Electrical & Electronic Workbenches for Education",
+		desc: "Supplying educational institutions with top-tier electrical and electronic workbenches to enhance hands-on learning and technical proficiency in engineering",
+		href: "/Signboards",
+		button: "Learn More",
+	},
+	{
+		id: 4,
+		image: "/banner4.jpg",
+		title:
+			"we offer the latest Dobot teaching kits to enhance educational experiences",
+		desc: "Our robotics kits are designed for effective STEM teaching,helping students grasp complex concepts through hands-on activities. Shop now and bring cutting-edge technology to your educational institution",
+		button: "Learn More",
 	},
 ];
 
@@ -64,59 +85,6 @@ const Slider = () => {
 						</div>
 					</div>
 				))}
-				<div
-					className="w-full h-full flex-shrink-0 bg-cover bg-center"
-					style={{ backgroundImage: `url(${banner2})` }}
-				>
-					<div className="flex flex-col justify-center items-start h-full text-left text-white p-12">
-						<div className="bg-black bg-opacity-50 p-4 rounded md:w-1/2">
-							<h1 className="text-4xl font-bold mb-4">
-								Comprehensive Robotics Lab Setup for Schools and Colleges
-							</h1>
-							<p className="mb-4">
-								Equipping schools and colleges with state-of-the-art robotics
-								labs to foster hands-on learning, innovation, and technical
-								skills development in robotics
-							</p>
-						</div>
-					</div>
-				</div>
-				<div
-					className="w-full h-full flex-shrink-0 bg-cover bg-center"
-					style={{ backgroundImage: `url(${banner3})` }}
-				>
-					<div className="flex flex-col justify-center items-start h-full text-left text-white p-12">
-						<div className="bg-black bg-opacity-50 p-4 rounded md:w-1/2">
-							<h1 className="text-4xl font-bold mb-4">
-								Advanced Electrical & Electronic Workbenches for Education
-							</h1>
-							<p className="mb-4">
-								Supplying educational institutions with top-tier electrical and
-								electronic workbenches to enhance hands-on learning and
-								technical proficiency in engineering
-							</p>
-						</div>
-					</div>
-				</div>
-				<div
-					className="w-full h-full flex-shrink-0 bg-cover bg-center"
-					style={{ backgroundImage: `url(${banner4})` }}
-				>
-					<div className="flex flex-col justify-center items-start h-full text-left text-white p-12">
-						<div className="bg-black bg-opacity-50 p-4 rounded md:w-1/2">
-							<h1 className="text-4xl font-bold mb-4">
-								we offer the latest Dobot teaching kits to enhance educational
-								experiences
-							</h1>
-							<p className="mb-4">
-								Our robotics kits are designed for effective STEM teaching,
-								helping students grasp complex concepts through hands-on
-								activities. Shop now and bring cutting-edge technology to your
-								educational institution
-							</p>
-						</div>
-					</div>
-				</div>
 			</div>
 			<button
 				className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
