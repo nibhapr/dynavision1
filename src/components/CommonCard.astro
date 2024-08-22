@@ -14,20 +14,12 @@ const { post } = Astro.props;
 ---
 
 <div
-	class="relative overflow-hidden mx-auto rounded-xl bg-white transition-transform duration-500 hover:-translate-y-1 hover:scale-105 dark:bg-neutral-900 m-4"
+	class="relative overflow-hidden mx-auto rounded-xl p-4 bg-white border-2 transition-transform duration-500 hover:-translate-y-1 hover:scale-105 dark:bg-neutral-900 m-4 flex flex-col"
 >
-	<a href={`/posts/documentation/${post.slug}/`} class="block">
-		<img src={post.data.coverSrc} alt="" />
-		<div class="absolute bottom-0 end-0 start-0 bg-gradient-to-t p-5 md:p-6">
-			<h3 class="mt-2 text-lg font-bold text-white"></h3>
-			<div class="mt-16 flex items-center gap-4 text-xs text-white">
-				<!-- <span>{post.data.tags.join(" ")}</span> -->
-				<!-- <FormattedDate date={post.data.pubDate} /> -->
-			</div>
-			<!-- <h3 class="mt-2 text-lg font-bold text-white">{post.data.description}</h3> -->
-		</div>
+	<a href={`/posts/documentation/${post.slug}/`} class="block flex-grow">
+		<img src={post.data.coverSrc} alt="" class="w-auto h-auto object-contain" />
 	</a>
-	<div class="text-center">
-		<p class="text-2xl">{post.data.title}</p>
+	<div class="text-center mt-auto">
+		<p class="text-xl">{post.data.title}</p>
 	</div>
 </div>

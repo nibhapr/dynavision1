@@ -303,6 +303,27 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "posts": {
+"astro-components copy 10.md": {
+	id: "astro-components copy 10.md";
+  slug: "robotics";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"astro-components copy 11.md": {
+	id: "astro-components copy 11.md";
+  slug: "multy";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"astro-components copy 12.md": {
+	id: "astro-components copy 12.md";
+  slug: "dobot";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "astro-components copy 4.md": {
 	id: "astro-components copy 4.md";
   slug: "dso";

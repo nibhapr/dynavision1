@@ -1,5 +1,6 @@
 ---
 import Hero from "@component/Hero.astro";
+import BannerSlider from "@component/BannerSlider";
 import Slider from "@component/Slider";
 import PostCard from "@component/CommonCard.astro";
 import { Layout } from "@globals";
@@ -8,6 +9,9 @@ import Pagination from "@component/Pagination.astro";
 import ServiceAstro from "@component/ServiceAstro.astro";
 import Faq from "@component/widgets/Faq";
 import TitleComponents from "@component/TitleComponents.astro";
+import Service from "@component/Service";
+import HeroSectionAlt from "@component/HeroSectionAlt.astro";
+import TestimonialsSection from "@component/TestimonialsSection.astro";
 const allPosts = await getCollection("posts");
 const postsPerPage = 15;
 const totalPages = Math.ceil(allPosts.length / postsPerPage);
@@ -15,13 +19,16 @@ const basePath = "/posts/";
 ---
 
 <Layout title="Digital oscilloscope distributor and manufacturer in india">
-	<Hero />
+	<BannerSlider client:load />
+	<!-- <Hero /> -->
 	<Slider client:load />
-	<ServiceAstro />
+	<Service client:load />
+	<Service client:load />
+	<!-- <ServiceAstro /> -->
 	<TitleComponents title="Our Products" />
 
 	<div
-		class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto mb-8"
+		class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto mb-8 p-4"
 	>
 		{allPosts.map((post) => <PostCard post={post} />)}
 	</div>
@@ -34,7 +41,42 @@ const basePath = "/posts/";
 		basePath={basePath}
 		maxDisplayedPages={5}
 	/>
-
+	<HeroSectionAlt
+		title="Enhance Learning with Our Advanced Technical School Equipment"
+		subTitle="Contact us Now"
+		url="/contact"
+	/>
+	<TestimonialsSection
+		title="Welcome to Digiimpact!"
+		subTitle="Where innovation meets execution"
+		;
+		testimonials={[
+			{
+				content:
+					"Transform your classroom with Dobot teaching kits from [Your Company Name]. Our robotics kits are ideal for STEM education, providing students with practical skills in robotics and coding. Browse our selection to find the perfect tools to boost learning and inspire future engineers.",
+				author: "",
+				role: "",
+			},
+		]}
+		statistics={[
+			{
+				count: 500,
+				description: "Products",
+			},
+			{
+				count: 1000,
+				description: "Customers",
+			},
+			{
+				count: 4,
+				description: "Locations",
+			},
+			{
+				count: 25,
+				description: "Employees",
+			},
+		]}
+	/>
 	<TitleComponents title="Frequently Asked Questions?" />
 	<Faq client:load />
 
