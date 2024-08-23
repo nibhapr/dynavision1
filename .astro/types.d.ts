@@ -166,6 +166,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"documentation/dobot.mdx": {
+	id: "documentation/dobot.mdx";
+  slug: "documentation/dobot";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "documentation/ds.mdx": {
 	id: "documentation/ds.mdx";
   slug: "documentation/ds";
@@ -201,6 +208,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"documentation/oscilloscope.mdx": {
+	id: "documentation/oscilloscope.mdx";
+  slug: "documentation/oscilloscope";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "documentation/qmanagement.mdx": {
 	id: "documentation/qmanagement.mdx";
   slug: "documentation/qmanagement";
@@ -211,6 +225,13 @@ declare module 'astro:content' {
 "documentation/restaurant.mdx": {
 	id: "documentation/restaurant.mdx";
   slug: "documentation/restaurant";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"documentation/solder.mdx": {
+	id: "documentation/solder.mdx";
+  slug: "documentation/solder";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -320,6 +341,20 @@ declare module 'astro:content' {
 "astro-components copy 12.md": {
 	id: "astro-components copy 12.md";
   slug: "dobot";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"astro-components copy 13.md": {
+	id: "astro-components copy 13.md";
+  slug: "solder";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"astro-components copy 14.md": {
+	id: "astro-components copy 14.md";
+  slug: "oscilloscope";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">

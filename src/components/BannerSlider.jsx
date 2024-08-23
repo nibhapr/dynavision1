@@ -5,6 +5,7 @@ const banner1 = "/banner1.jpg";
 const banner2 = "/banner2.jpg";
 const banner3 = "/banner4.jpg";
 const banner4 = "/banner5.jpg";
+const banner5 = "/banner6.jpg";
 const sliders = [
 	{
 		id: 1,
@@ -24,7 +25,7 @@ const sliders = [
 	},
 	{
 		id: 3,
-		image: "/banner3.jpg",
+		image: "/banner4.jpg",
 		title: "Advanced Electrical & Electronic Workbenches for Education",
 		desc: "Supplying educational institutions with top-tier electrical and electronic workbenches to enhance hands-on learning and technical proficiency in engineering",
 		href: "/Signboards",
@@ -32,7 +33,15 @@ const sliders = [
 	},
 	{
 		id: 4,
-		image: "/banner4.jpg",
+		image: "/banner5.jpg",
+		title:
+			"we offer the latest Dobot teaching kits to enhance educational experiences",
+		desc: "Our robotics kits are designed for effective STEM teaching,helping students grasp complex concepts through hands-on activities. Shop now and bring cutting-edge technology to your educational institution",
+		button: "Learn More",
+	},
+	{
+		id: 5,
+		image: "/banner6.jpg",
 		title:
 			"we offer the latest Dobot teaching kits to enhance educational experiences",
 		desc: "Our robotics kits are designed for effective STEM teaching,helping students grasp complex concepts through hands-on activities. Shop now and bring cutting-edge technology to your educational institution",
@@ -42,7 +51,7 @@ const sliders = [
 
 const Slider = () => {
 	const [currentSlide, setCurrentSlide] = useState(0);
-	const slides = [banner1, banner2, banner3, banner4];
+	const slides = [banner1, banner2, banner3, banner4, banner5];
 
 	const nextSlide = () => {
 		setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);

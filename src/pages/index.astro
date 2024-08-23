@@ -13,6 +13,7 @@ import Service from "@component/Service";
 import TitleComponents from "@component/TitleComponents.astro";
 import HeroSectionAlt from "@component/HeroSectionAlt.astro";
 import TestimonialsSection from "@component/TestimonialsSection.astro";
+import ServiceRound from "@component/ServiceRound";
 const allPosts = await getCollection("posts");
 const postsPerPage = 15;
 const totalPages = Math.ceil(allPosts.length / postsPerPage);
@@ -24,6 +25,7 @@ const basePath = "/posts/";
 	<!-- <Hero /> -->
 	<Slider client:load />
 	<Service client:load />
+	<ServiceRound client:load />
 	<!-- <ServiceAstro /> -->
 	<TitleComponents title="Our Products" />
 
