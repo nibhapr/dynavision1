@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "tailwindcss/tailwind.css";
 
-const banner1 = "/banner1.jpg";
-const banner2 = "/banner2.jpg";
-const banner3 = "/banner4.jpg";
-const banner4 = "/banner5.jpg";
-const banner5 = "/banner6.jpg";
+const banner1 = "/banner1.webp";
+const banner2 = "/banner2.webp";
+const banner3 = "/banner4.webp";
+const banner4 = "/banner5.webp";
+const banner5 = "/banner6.webp";
 const sliders = [
 	{
 		id: 1,
-		image: "/banner1.jpg",
+		image: "/banner1.webp",
 		title: "Digital oscilloscope distributor in kerala",
 		desc: "Distributing advanced digital oscilloscopes to enhance precision in electronics education and hands-on learning",
 		href: "/Signboards",
@@ -17,7 +17,7 @@ const sliders = [
 	},
 	{
 		id: 2,
-		image: "/banner2.jpg",
+		image: "/banner2.webp",
 		title: "Comprehensive Robotics Lab Setup for Schools and Colleges",
 		desc: "Equipping schools and colleges with state-of-the-art robotics labs to foster hands-on learning, innovation, and technical skills development in robotics",
 		href: "/Signboards",
@@ -25,7 +25,7 @@ const sliders = [
 	},
 	{
 		id: 3,
-		image: "/banner4.jpg",
+		image: "/banner4.webp",
 		title: "Advanced Electrical & Electronic Workbenches for Education",
 		desc: "Supplying educational institutions with top-tier electrical and electronic workbenches to enhance hands-on learning and technical proficiency in engineering",
 		href: "/Signboards",
@@ -33,7 +33,7 @@ const sliders = [
 	},
 	{
 		id: 4,
-		image: "/banner5.jpg",
+		image: "/banner5.webp",
 		title:
 			"we offer the latest Dobot teaching kits to enhance educational experiences",
 		desc: "Our robotics kits are designed for effective STEM teaching,helping students grasp complex concepts through hands-on activities. Shop now and bring cutting-edge technology to your educational institution",
@@ -41,7 +41,7 @@ const sliders = [
 	},
 	{
 		id: 5,
-		image: "/banner6.jpg",
+		image: "/banner6.webp",
 		title:
 			"we offer the latest Dobot teaching kits to enhance educational experiences",
 		desc: "Our robotics kits are designed for effective STEM teaching,helping students grasp complex concepts through hands-on activities. Shop now and bring cutting-edge technology to your educational institution",
