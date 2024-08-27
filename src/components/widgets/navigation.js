@@ -2,8 +2,7 @@
 
 // An object of links for social icons
 export const socialLinks = {
-	facebook:
-		"https://www.facebook.com/p/Digital-Link-Technology-LLC-100087290161175/",
+	facebook: "https://www.facebook.com/profile.php?id=61561361666336",
 	x: "https://twitter.com",
 	linkedin: "https://www.linkedin.com/company/digital-link-technology-uae/",
 	google: "https://g.co/kgs/yq4CrN8",
