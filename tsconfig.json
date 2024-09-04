@@ -4,6 +4,7 @@
 		"module": "ESNext",
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
+		"esModuleInterop": true,
 		"isolatedModules": true,
 		"types": ["astro/client"],
 		"baseUrl": ".",

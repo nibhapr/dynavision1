@@ -1,0 +1,40 @@
+---
+// Importing necessary components
+import FabricationComponents from "@component/FabricationComponents";
+import Layout from "@component/global/Layout/Layout.astro";
+
+// Define TypeScript interface for props
+interface Props {
+	title: string;
+	subTitle?: string;
+	benefits?: Array<string>;
+}
+
+const pageTitle: string = "Fabrication Solution In Dubai";
+const absubTitle: string =
+	"Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution.";
+---
+
+<!--  -->
+<Layout
+	title={pageTitle}
+	structuredData={{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"@id": "https://lovosis.com/about",
+		url: "https://lovosis.com/about",
+		name: "IT Solution | Lovosis",
+		description:
+			"Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution. Learn about our commitment to excellence in the UAE construction industry.",
+		isPartOf: {
+			"@type": "WebSite",
+			url: "https://lovosis.com",
+			name: "Lovosis",
+			description:
+				"Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates.",
+		},
+		inLanguage: "en-US",
+	}}
+>
+	<FabricationComponents client:load />
+</Layout>

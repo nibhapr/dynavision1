@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	darkMode: ["class"],
-	content: ["./src/**/*.{astro,html,jsx,tsx,svelte,vue,js,ts}"],
+	content: [
+		"./src/**/*.{astro,html,jsx,tsx,svelte,vue,js,ts}",
+		"./node_modules/preline/preline.js",
+	],
 	prefix: "",
 	theme: {
 		container: {
@@ -71,5 +74,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate"), require("preline/plugin")],
 };

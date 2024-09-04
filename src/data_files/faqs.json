@@ -1,0 +1,33 @@
+{
+  "subTitle": "Ask us anything about our brand and products, and get factual responses.",
+  "faqs": [
+    {
+      "question": "What services does Lovosis provide?",
+      "answer": "Lovosis specializes in custom fabrication and surveillance solutions. We provide comprehensive IT solutions tailored to your specific needs, including installation, maintenance, and support for surveillance systems. Our offerings include renowned brands such as Hikvision, Dahua, and UNV."
+    },
+    {
+      "question": "What types of surveillance systems do you offer?",
+      "answer": "We offer a variety of surveillance systems including CCTV cameras, IP cameras, video door phones,NVR, DVR and integrated security systems. Our solutions are designed to provide maximum security and monitoring capabilities."
+    },
+    {
+      "question": "Do you offer maintenance services for surveillance systems?",
+      "answer": "Absolutely. We provide ongoing maintenance and support services to ensure your surveillance systems are always operating at their best. This includes regular check-ups, troubleshooting, and upgrades as necessary."
+    },
+    {
+      "question": "Do you offer IT support and consulting?",
+      "answer": "Yes, we provide both IT support and consulting services. Our team of experts is available to assist with any IT-related issues and to offer strategic advice to improve your IT infrastructure."
+    },
+    {
+      "question": "What brands of surveillance equipment do you offer?",
+      "answer": "We offer a range of high-quality surveillance equipment from leading brands such as Hikvision, Dahua, and UNV. These brands are known for their reliability, advanced features, and superior performance."
+    },
+    {
+      "question": "Can Lovosis handle large-scale projects?",
+      "answer": "Yes, we have the expertise and resources to handle projects of any scale. Whether you need a small custom setup or a large-scale surveillance and IT solution, we can deliver high-quality results on time and within budget."
+    },
+    {
+      "question": "How can I request a quote for your services?",
+      "answer": "You can request a quote by contacting us through our website, emailing us at [email address], or calling our office at [phone number]. We'll be happy to discuss your needs and provide a detailed quote."
+    }
+  ]
+}

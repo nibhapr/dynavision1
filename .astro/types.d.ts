@@ -166,6 +166,20 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"documentation/digitalm92a.mdx": {
+	id: "documentation/digitalm92a.mdx";
+  slug: "documentation/digitalm92a";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"documentation/digitalmulty830.mdx": {
+	id: "documentation/digitalmulty830.mdx";
+  slug: "documentation/digitalmulty830";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "documentation/dobot.mdx": {
 	id: "documentation/dobot.mdx";
   slug: "documentation/dobot";
@@ -204,6 +218,13 @@ declare module 'astro:content' {
 "documentation/meter.mdx": {
 	id: "documentation/meter.mdx";
   slug: "documentation/meter";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"documentation/multy8220b.mdx": {
+	id: "documentation/multy8220b.mdx";
+  slug: "documentation/multy8220b";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -355,6 +376,27 @@ declare module 'astro:content' {
 "astro-components copy 14.md": {
 	id: "astro-components copy 14.md";
   slug: "oscilloscope";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"astro-components copy 15.md": {
+	id: "astro-components copy 15.md";
+  slug: "multy8220b";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"astro-components copy 16.md": {
+	id: "astro-components copy 16.md";
+  slug: "digitalm92a";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"astro-components copy 17.md": {
+	id: "astro-components copy 17.md";
+  slug: "digitalmulty830";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">

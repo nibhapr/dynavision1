@@ -1,0 +1,30 @@
+[
+	{
+		"id": 1,
+		"title": "5K Ultra Wide Interactive Displays for Business",
+		"description": "Android 11 with high performance, Ram 4G Rom32G, Maximum can be Ram8G Rom128G High accuracy infrared 40-Point Touch",
+		"imageSrc": "/interact.webp",
+		"altText": "Metal Fabrication"
+	},
+	{
+		"id": 2,
+		"title": "Interactive Flat Panel Android 11 CVT T982",
+		"description": "Android 11 with high performance, Ram 4G Rom32G, Maximum can be Ram8G Rom128G High accuracy infrared 40-Point Touch. Zero bonding technolo",
+		"imageSrc": "/interact4.png",
+		"altText": "Woodworking"
+	},
+	{
+		"id": 3,
+		"title": "Interactive Flat Panel Android 11 CVT 311D2",
+		"description": "Android 11 with high performance, Ram 4G Rom32G, Maximum can be Ram8G Rom128G High accuracy infrared 40-Point Touch. Zero bonding technology; ",
+		"imageSrc": "/interact2.png",
+		"altText": "Composite Fabrication"
+	},
+	{
+		"id": 4,
+		"title": "IR Interactive Board Android 11 T982",
+		"description": "From initial concept to final design, our prototyping services help you visualize and refine your ideas. We use 3D modeling and other advanced techniques to ensure your design is perfected before fabrication begins.",
+		"imageSrc": "/interact3.png",
+		"altText": "Prototyping and Design"
+	}
+]

@@ -11,6 +11,7 @@ export const socialLinks = {
 export const navBarLinks = [
 	{ name: "Home", url: "/" },
 	{ name: "Blog", url: "/blogs" },
+	{ name: "Interactive Panels", url: "/fabrication" },
 	{ name: "Contact", url: "/contact" },
 ];
 export const footerData = {
