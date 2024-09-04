@@ -223,17 +223,17 @@ import { Image } from "astro:assets";
 		}
 	}
 
-	function toggleMenu() {
-		const collapseContent = document.getElementById("collapseContent");
-		collapseContent.classList.toggle("hidden");
-	}
+	// function toggleMenu() {
+	// 	const collapseContent = document.getElementById("collapseContent");
+	// 	collapseContent.classList.toggle("hidden");
+	// }
 
 	window.addEventListener("scroll", (ev) => {
 		ev.preventDefault();
 		windowScroll();
 	});
 
-	document
-		.querySelector(".md:hidden .responsive-toggle")
-		.addEventListener("click", toggleMenu);
+	// document
+	// 	.querySelector(".md:hidden .responsive-toggle")
+	// 	.addEventListener("click", toggleMenu);
 </script>
