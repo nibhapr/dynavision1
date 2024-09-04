@@ -1,22 +1,12 @@
 import { SITE } from "@component/Data/constants";
 import cardsData from "@component/Data/cardsData.json";
-import { motion, useInView, useAnimation } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const FabricationPage = () => {
 	const pageTitle = `High-Performance Interactive Panels for Education | ${SITE.title + " - " + "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates"}`;
 	const abtitle = "High-Performance Interactive Panels for Education";
 	const absubTitle =
 		"DIGIIMPACT,  Authorized supplier of top-quality Interactive Panels for educations";
-	const ref = useRef(null);
-	const isIview = useInView(ref, { once: true });
-	const maincontroll = useAnimation();
-	useEffect(() => {
-		if (isIview) {
-			maincontroll.start("visible");
-		}
-	}, [isIview]);
-	console.log(cardsData);
 
 	return (
 		<section className="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
