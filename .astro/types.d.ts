@@ -361,7 +361,7 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 "astro-components copy 12.md": {
 	id: "astro-components copy 12.md";
-  slug: "dobot";
+  slug: "robot";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">

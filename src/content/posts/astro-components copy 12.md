@@ -1,6 +1,6 @@
 ---
-title: Dobot Educational Kit
-slug: dobot
+title: Robot Educational Kit
+slug: robot
 description: Unofficial Whatsapp API for Developers
 category:
   - One

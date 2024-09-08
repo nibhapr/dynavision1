@@ -35,7 +35,7 @@ const sliders = [
 		id: 4,
 		image: "/banner5.webp",
 		title:
-			"we offer the latest Dobot teaching kits to enhance educational experiences",
+			"we offer the latest Robot teaching kits to enhance educational experiences",
 		desc: "Our robotics kits are designed for effective STEM teaching,helping students grasp complex concepts through hands-on activities. Shop now and bring cutting-edge technology to your educational institution",
 		button: "Learn More",
 	},
@@ -43,7 +43,7 @@ const sliders = [
 		id: 5,
 		image: "/banner6.webp",
 		title:
-			"we offer the latest Dobot teaching kits to enhance educational experiences",
+			"we offer the latest Robot teaching kits to enhance educational experiences",
 		desc: "Our robotics kits are designed for effective STEM teaching,helping students grasp complex concepts through hands-on activities. Shop now and bring cutting-edge technology to your educational institution",
 		button: "Learn More",
 	},

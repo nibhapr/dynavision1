@@ -43,9 +43,9 @@ const Service = () => {
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 						<div className="justify-start items-center gap-[275px] flex">
 							<div className="flex-col justify-start items-start gap-[26px] inline-flex text-black">
-								<div className="text-3xl font-medium">DOBOT Magician E6</div>
+								<div className="text-3xl font-medium">ROBOTICS LAB</div>
 								<div className="text-lg font-normal">
-									Unlock the potential of robotics with the DOBOT Magician E6, a
+									Unlock the potential of robotics with the ROBOT Magician E6, a
 									cutting-edge desktop collaborative robot designed to
 									revolutionize education and research. Combining precision,
 									versatility, and ease of use, the Magician E6 provides a
