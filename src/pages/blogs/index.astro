@@ -15,24 +15,73 @@ const Blogtitle =
 ---
 
 <Layout title={Blogtitle}>
-	<main class="space-y-20">
-		<div class="max-w-screen-xl mx-auto px-6 md:px-14 xl:px-14">
-			<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-				<div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
-					<h2
-						class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900"
-					>
-						Our Blog
+	<main class="space-y-40 mb-40 pt-24">
+		<section class="bg-white">
+			<div
+				class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
+			>
+				<div class="font-light text-gray-500 sm:text-lg">
+					<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
+						DigiImpact at DIDAC INDIA 2024
 					</h2>
-					<p class="font-light text-gray-500 sm:text-xl">
-						We use an agile approach to test assumptions and connect with the
-						needs of your audience early and often.
+					<p class="mb-4">
+						We are excited to announce that Digiimpact, INDIA's leading
+						distributor of educational equipment, will be participating in the
+						prestigious DIDAC INDIA exhibition from September 18th to 20th,
+						2024. This event, held in New Delhi, brings together innovators and
+						leaders in the education sector to showcase the latest products and
+						solutions. At DigiImpact, we specialize in providing advanced tools
+						and technologies to technical schools and engineering colleges
+						across INDIA. Our range includes high-precision oscilloscopes,
+						multimeters, customized workbenches, interactive panels, and more.
+						We look forward to showcasing our newest offerings, including
+						robotics lab setups and cutting-edge digital learning solutions,
+						designed to elevate the learning experience. Visit our booth to
+						learn more about how DigiImpact is transforming education through
+						innovative equipment distribution.<br />
+						Click here:<a
+							href="https://www.didacindia.com"
+							target="_blank"
+							style="color: red;">DIDAC INDIA exhibition</a
+						>
 					</p>
+					<!-- <div class="flex justify-between items-center mt-6">
+						<div class="flex items-center space-x-4">
+							<img class="w-7 h-7 rounded-full" width={32} height={32} />
+							<span class="font-medium"> </span>
+						</div>
+						<span class="text-sm"></span>
+					</div> -->
 				</div>
-				<div class="grid gap-8 lg:grid-cols-2">
-					{articlesData.map((blogEntry) => <Bolg blogEntry={blogEntry} />)}
+				<div class="grid grid-cols-1 gap-4 mt-8">
+					<!-- <img class="rounded-lg w-full h-full" src="" alt="office content 1" /> -->
+					<img
+						class="mt-4 w-full h-full lg:mt-10 rounded-lg"
+						src="/didac.jpg"
+						alt="office content 2"
+					/>
 				</div>
 			</div>
-		</div>
+		</section>
+		<main class="space-y-20">
+			<div class="max-w-screen-xl mx-auto px-6 md:px-14 xl:px-14">
+				<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+					<div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
+						<h2
+							class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900"
+						>
+							Our Blog
+						</h2>
+						<p class="font-light text-gray-500 sm:text-xl">
+							We use an agile approach to test assumptions and connect with the
+							needs of your audience early and often.
+						</p>
+					</div>
+					<div class="grid gap-8 lg:grid-cols-2">
+						{articlesData.map((blogEntry) => <Bolg blogEntry={blogEntry} />)}
+					</div>
+				</div>
+			</div>
+		</main>
 	</main>
 </Layout>

@@ -14,6 +14,10 @@ import TitleComponents from "@component/TitleComponents.astro";
 import HeroSectionAlt from "@component/HeroSectionAlt.astro";
 import TestimonialsSection from "@component/TestimonialsSection.astro";
 import ServiceRound from "@component/ServiceRound";
+import { AlignHorizontalJustifyCenter } from "lucide-react";
+import AnnounceComponents from "@component/AnnounceComponents";
+import TextAnnimation from "@component/TextAnnimation";
+
 const allPosts = await getCollection("posts");
 const postsPerPage = 15;
 const totalPages = Math.ceil(allPosts.length / postsPerPage);
@@ -51,6 +55,8 @@ const basePath = "/posts/";
 	title="Digital oscilloscope distributor and manufacturer in india"
 >
 	<BannerSlider client:load />
+	<TextAnnimation client:load />
+	<!-- <AnnounceComponents client:load /> -->
 	<!-- <Hero /> -->
 	<Slider client:load />
 	<Service client:load />
