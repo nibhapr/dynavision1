@@ -18,7 +18,7 @@ const TextAnimation = () => {
 	};
 
 	const letter = {
-		hidden: { opacity: 0, y: 50 },
+		hidden: { opacity: 0, y: 100 },
 		visible: {
 			opacity: 1,
 			y: 0,
@@ -28,7 +28,7 @@ const TextAnimation = () => {
 
 	return (
 		<motion.div
-			className="md:flex justify-center text-red-600 px-8 text-base md:text-xl lg:text-2xl"
+			className="md:flex justify-center overflow-auto text-red-600 px-8 text-base md:text-xl lg:text-2xl"
 			variants={container}
 			initial="hidden"
 			animate="visible"
