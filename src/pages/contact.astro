@@ -5,38 +5,35 @@ const title: string =
 	"Best Educational equipment manufacturer and Distribution company India,Kerala";
 const description: string =
 	"We distribute educational equipment across India, offering a wide range of tools and resources to enhance learning experiences in schools, engineering colleges, and institutions";
+const structuredData = {
+	"@context": "http://schema.org",
+	"@type": "Organization",
+	name: "Digiimpact",
+	url: "https://digiimpact.tech/contact",
+	logo: "https://digiimpact.tech/logodigi.jpg",
+	description: "Contact us for Digital oscilloscope in kerala,India",
+	contactPoint: {
+		"@type": "ContactPoint",
+		telephone: "+919747745544",
+		contactType: "customer service",
+		areaServed: "INDIA",
+		availableLanguage: "English",
+	},
+	sameAs: [
+		"https://www.facebook.com/digiimpact",
+		"https://twitter.com/digiimpact",
+	],
+	address: {
+		"@type": "PostalAddress",
+		streetAddress: "1555/4 Office - Royal Plaza Building Periyar Nagar",
+		addressLocality: "Aluva",
+		addressRegion: "Ernakulam",
+		postalCode: "683101",
+		addressCountry: "IN",
+	},
+};
 ---
 
-<Layout
-	title={title}
-	description={description}
-	structuredData={{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		name: "Digiimpact",
-		url: "https://digiimpact.tech/contact",
-		logo: "https://digiimpact.tech/logodigi.jpg",
-		description: "Contact us for Digital oscilloscope in kerala,India",
-		contactPoint: {
-			"@type": "ContactPoint",
-			telephone: "+919747745544",
-			contactType: "customer service",
-			areaServed: "INDIA",
-			availableLanguage: "English",
-		},
-		sameAs: [
-			"https://www.facebook.com/digiimpact",
-			"https://twitter.com/digiimpact",
-		],
-		address: {
-			"@type": "PostalAddress",
-			streetAddress: "1555/4 Office - Royal Plaza Building Periyar Nagar",
-			addressLocality: "Aluva",
-			addressRegion: "Ernakulam",
-			postalCode: "683101",
-			addressCountry: "IN",
-		},
-	}}
->
+<Layout title={title} description={description} sd={structuredData}>
 	<ContactComponents />
 </Layout>

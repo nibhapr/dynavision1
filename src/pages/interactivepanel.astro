@@ -1,9 +1,7 @@
 ---
-// Importing necessary components
 import FabricationComponents from "@component/FabricationComponents";
 import Layout from "@component/global/Layout/Layout.astro";
 
-// Define TypeScript interface for props
 interface Props {
 	title: string;
 	subTitle?: string;
@@ -13,27 +11,24 @@ interface Props {
 const pageTitle: string = "Smart Interactive Whiteboard for Classrooms";
 const absubTitle: string =
 	"Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution.";
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	"@id": "https://lovosis.com/about",
+	url: "https://lovosis.com/about",
+	name: "IT Solution | Lovosis",
+	description: "",
+	isPartOf: {
+		"@type": "WebSite",
+		url: "https://lovosis.com",
+		name: "Lovosis",
+		description:
+			"Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates.",
+	},
+	inLanguage: "en-US",
+};
 ---
 
-<!--  -->
-<Layout
-	title={pageTitle}
-	structuredData={{
-		"@context": "https://schema.org",
-		"@type": "WebPage",
-		"@id": "https://lovosis.com/about",
-		url: "https://lovosis.com/about",
-		name: "IT Solution | Lovosis",
-		description: "",
-		isPartOf: {
-			"@type": "WebSite",
-			url: "https://lovosis.com",
-			name: "Lovosis",
-			description:
-				"Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates.",
-		},
-		inLanguage: "en-US",
-	}}
->
+<Layout title={pageTitle} sd={structuredData}>
 	<FabricationComponents client:load />
 </Layout>

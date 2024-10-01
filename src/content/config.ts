@@ -60,6 +60,7 @@ const docs = defineCollection({
 		description: z.string(),
 		publishedTime: z.string(),
 		modifiedTime: z.string(),
+		image: z.string().optional(),
 	}),
 });
 export const collections = {

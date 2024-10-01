@@ -10,26 +10,7 @@ const FabricationPage = () => {
 
 	return (
 		<section className="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
-			<motion.div
-				// variants={{
-				// 	hidden: { opacity: 0, scale: 0.9 },
-				// 	visible: { opacity: 1, scale: 1 },
-				// }}
-				// initial="hidden"
-				// animate="visible"
-				// transition={{
-				// 	duration: 0.5,
-				// 	delay: 0.5,
-				// 	ease: [0, 0.71, 0.2, 1.01],
-				// 	scale: {
-				// 		type: "spring",
-				// 		damping: 5,
-				// 		stiffness: 100,
-				// 		restDelta: 0.001,
-				// 	},
-				// }}
-				className="text-center bg-gray-100 dark:bg-neutral-500 p-5 md:p-12 rounded-2xl mb-20"
-			>
+			<motion.div className="text-center bg-gray-100 dark:bg-neutral-500 p-5 md:p-12 rounded-2xl mb-20">
 				<h1 className="text-balance animate-fade-in-left text-3xl md:text-6xl md:leading-tight font-bold tracking-tight text-neutral-800 dark:text-neutral-100">
 					{abtitle}
 				</h1>
@@ -46,7 +27,7 @@ const FabricationPage = () => {
 					className="flex flex-col justify-center"
 				>
 					{" "}
-					<img src="/interact1.png" alt="billboard image" />
+					<img src="/interact5.webp" alt="billboard image" />
 				</motion.div>
 				<motion.div
 					initial={{ x: 100, opacity: 0 }}

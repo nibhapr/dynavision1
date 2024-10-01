@@ -10,21 +10,21 @@
 		"id": 2,
 		"title": "Interactive Flat Panel Android 11 CVT T982",
 		"description": "Android 11 with high performance, Ram 4G Rom32G, Maximum can be Ram8G Rom128G High accuracy infrared 40-Point Touch. Zero bonding technolo",
-		"imageSrc": "/interact4.png",
+		"imageSrc": "/interact4.webp",
 		"altText": "Woodworking"
 	},
 	{
 		"id": 3,
 		"title": "Interactive Flat Panel Android 11 CVT 311D2",
 		"description": "Android 11 with high performance, Ram 4G Rom32G, Maximum can be Ram8G Rom128G High accuracy infrared 40-Point Touch. Zero bonding technology; ",
-		"imageSrc": "/interact2.png",
+		"imageSrc": "/interact2.webp",
 		"altText": "Composite Fabrication"
 	},
 	{
 		"id": 4,
 		"title": "IR Interactive Board Android 11 T982",
 		"description": "From initial concept to final design, our prototyping services help you visualize and refine your ideas. We use 3D modeling and other advanced techniques to ensure your design is perfected before fabrication begins.",
-		"imageSrc": "/interact3.png",
+		"imageSrc": "/interact3.webp",
 		"altText": "Prototyping and Design"
 	}
 ]

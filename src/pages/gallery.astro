@@ -1,28 +1,26 @@
 ---
 import Layout from "@component/global/Layout/Layout.astro";
 const pageTitle: string = "Fabrication Solution In Dubai";
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	"@id": "https://lovosis.com/about",
+	url: "https://lovosis.com/about",
+	name: "IT Solution | Lovosis",
+	description:
+		"Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution. Learn about our commitment to excellence in the UAE construction industry.",
+	isPartOf: {
+		"@type": "WebSite",
+		url: "https://lovosis.com",
+		name: "Lovosis",
+		description:
+			"Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates.",
+	},
+	inLanguage: "en-US",
+};
 ---
 
-<Layout
-	title={pageTitle}
-	structuredData={{
-		"@context": "https://schema.org",
-		"@type": "WebPage",
-		"@id": "https://lovosis.com/about",
-		url: "https://lovosis.com/about",
-		name: "IT Solution | Lovosis",
-		description:
-			"Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution. Learn about our commitment to excellence in the UAE construction industry.",
-		isPartOf: {
-			"@type": "WebSite",
-			url: "https://lovosis.com",
-			name: "Lovosis",
-			description:
-				"Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates.",
-		},
-		inLanguage: "en-US",
-	}}
->
+<Layout title={pageTitle} sd={structuredData}>
 	<!-- Features -->
 	<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
 		<div class="relative p-6 md:p-16">
@@ -343,7 +341,7 @@ const pageTitle: string = "Fabrication Solution In Dubai";
 				/>
 				<img
 					class="w-full h-auto object-cover"
-					src="/exhibition2.JPG"
+					src="/russian.jpg"
 					alt="Gallery Masonry Image"
 				/>
 			</div>
