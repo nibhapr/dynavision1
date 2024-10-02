@@ -24,30 +24,16 @@ const totalPages = Math.ceil(allPosts.length / postsPerPage);
 const basePath = "/posts/";
 const structuredData = {
 	"@context": "http://schema.org",
-	"@type": "Organization",
+	"@type": "website",
 	name: "Digiimpact",
 	url: "https://digiimpact.tech/contact",
-	logo: "https://digiimpact.tech/logodigi.jpg",
-	description: "Contact us for Digital oscilloscope in kerala,India",
-	contactPoint: {
-		"@type": "ContactPoint",
-		telephone: "+919747745544",
-		contactType: "customer service",
-		areaServed: "INDIA",
-		availableLanguage: "English",
-	},
+	logo: { "@type": "ImageObject", url: "https://digiimpact.tech/logodigi.jpg" },
+	description: "Digital oscilloscope distributor and manufacturer in india",
+
 	sameAs: [
 		"https://www.facebook.com/digiimpact",
 		"https://twitter.com/digiimpact",
 	],
-	address: {
-		"@type": "PostalAddress",
-		streetAddress: "1555/4 Office - Royal Plaza Building Periyar Nagar",
-		addressLocality: "Aluva",
-		addressRegion: "Ernakulam",
-		postalCode: "683101",
-		addressCountry: "IN",
-	},
 };
 ---
 

@@ -20,9 +20,37 @@ const blogPosts: CollectionEntry<"blog">[] = await getCollection("blog");
 const relatedPosts: CollectionEntry<"blog">[] = blogPosts.filter(
 	(blogEntry) => blogEntry.slug !== post.slug
 );
+const structuredData = {
+	"@context": "http://schema.org",
+	"@type": "BlogPostings",
+	headline: post.data.title,
+	url: `${Astro.url}`,
+	image: `${Astro.url.origin}${post.data.prodImage}`,
+	description: post.data.description,
+	datePublished: post.data.publishedTime,
+	dateModified: post.data.modifiedTime,
+	author: {
+		"@type": "Person",
+		name: post.data.author,
+		url: `${Astro.url}`,
+	},
+	publisher: {
+		"@type": "Organization",
+		name: "Digiimpact",
+		logo: {
+			"@type": "ImageObject",
+			url: "https://digiimpact.tech/logodigi.jpg",
+		},
+	},
+	keywords: "Digital oscilloscope, Robotics lab, Work benches",
+};
 ---
 
-<Layout title={post.data.title} description={post.data.description}>
+<Layout
+	title={post.data.title}
+	description={post.data.description}
+	sd={structuredData}
+>
 	<main class="space-y-40 mb-40 pt-24">
 		<section class="bg-white">
 			<div
