@@ -22,7 +22,7 @@ const relatedPosts: CollectionEntry<"blog">[] = blogPosts.filter(
 );
 const structuredData = {
 	"@context": "http://schema.org",
-	"@type": "BlogPostings",
+	"@type": "BlogPosting",
 	headline: post.data.title,
 	url: `${Astro.url}`,
 	image: `${Astro.url.origin}${post.data.prodImage}`,
@@ -39,7 +39,11 @@ const structuredData = {
 		name: "Digiimpact",
 		logo: {
 			"@type": "ImageObject",
-			url: "https://digiimpact.tech/logodigi.jpg",
+			url: `${Astro.url}`,
+		},
+		mainEntityOfPage: {
+			"@type": "WebPage",
+			"@id": "https://digiimpact.tech/blogs/dso/",
 		},
 	},
 	keywords: "Digital oscilloscope, Robotics lab, Work benches",
