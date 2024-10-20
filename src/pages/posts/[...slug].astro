@@ -25,28 +25,7 @@ if (!slug || !doc) {
 		statusText: "Not found",
 	});
 }
-const structuredData = {
-	"@context": "http://schema.org",
-	"@type": "product",
-	name: "Digiimpact",
-	url: "https://digiimpact.tech",
-	image: `${Astro.url.origin}/${doc.data.image}`,
-	description: doc.data.description,
-	seller: {
-		"@type": "Organization",
-		name: "Digiimpact",
-	},
-	brand: {
-		"@type": "Brand",
-		name: "Digiimpact",
-	},
-	aggregateRating: {
-		"@type": "AggregateRating",
-		ratingValue: "4.5",
-		ratingCount: "100",
-	},
-	datePublished: doc.data.publishedTime,
-};
+
 const structuredData = {
 	"@context": "https://schema.org",
 	"@graph": [
