@@ -15,6 +15,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"docs">;
 const doc = Astro.props;
 const slug = Astro.params.slug;
+
 // const toc = await getTableOfContents(doc.body);
 const { Content } = await doc.render();
 
@@ -45,6 +46,99 @@ const structuredData = {
 		ratingCount: "100",
 	},
 	datePublished: doc.data.publishedTime,
+};
+const structuredData = {
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": ["Person", "Organization"],
+			"@id": "https://digiimpact.tech/#person",
+			name: "digiimpact.tech",
+			logo: {
+				"@type": "ImageObject",
+				"@id": "https://digiimpact.tech/#logo",
+				url: "https://digiimpact.tech/logodigi.jpg",
+				contentUrl: "https://digiimpact.tech/logodigi.jpg",
+				caption: "digiimpact.tech",
+				inLanguage: "en-GB",
+			},
+			image: {
+				"@type": "ImageObject",
+				"@id": "https://digiimpact.tech/#logo",
+				url: "https://digiimpact.tech/logodigi.jpg",
+				contentUrl: "https://digiimpact.tech/logodigi.jpg",
+				caption: "digiimpact.tech",
+				inLanguage: "en-GB",
+			},
+		},
+		{
+			"@type": "WebSite",
+			"@id": "https://digiimpact.tech/#website",
+			url: "https://digiimpact.tech",
+			name: "digiimpact.tech",
+			publisher: {
+				"@id": "https://digiimpact.tech/#person",
+			},
+			inLanguage: "en-GB",
+		},
+		{
+			"@type": "ImageObject",
+			"@id": `${Astro.url.origin}/${doc.data.image}`,
+			url: `${Astro.url.origin}/${doc.data.image}`,
+			width: 700,
+			height: 700,
+			inLanguage: "en-GB",
+		},
+		{
+			"@type": "ItemPage",
+			"@id": `${Astro.url.origin}`,
+			url: `${Astro.url.origin}/${doc.data.image}`,
+			name: doc.data.title,
+			datePublished: doc.data.publishedTime,
+			dateModified: doc.data.modifiedTime,
+			isPartOf: {
+				"@id": "https://digiimpact.tech/#website",
+			},
+			primaryImageOfPage: {
+				"@id": `${Astro.url.origin}/${doc.data.image}`,
+			},
+			inLanguage: "en-GB",
+		},
+		{
+			"@type": "Product",
+			name: doc.data.title,
+			url: `${Astro.url.origin}/${doc.data.image}`,
+			description: doc.data.description,
+			image: {
+				"@type": "ImageObject",
+				url: `${Astro.url.origin}/${doc.data.image}`,
+				name: doc.data.title,
+			},
+			video: {
+				"@type": "videoObject",
+				description: doc.data.description,
+				thumbnailUrl: `${Astro.url.origin}/${doc.data.image}`,
+				uploadDate: "2023-05-20T05:45:58+01:00",
+				name: doc.data.title,
+			},
+			review: {
+				"@type": "Review",
+				datePublished: "2023-05-20T05:45:58+01:00",
+				dateModified: "2024-10-19T08:31:43+01:00",
+				author: {
+					"@type": "Person",
+					name: "digiimpact",
+				},
+				reviewRating: {
+					"@type": "Rating",
+					ratingValue: "4",
+				},
+			},
+			mainEntityOfPage: {
+				"@id": `${Astro.url.origin}`,
+			},
+		},
+	],
 };
 ---
 
