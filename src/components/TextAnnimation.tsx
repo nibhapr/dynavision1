@@ -38,6 +38,9 @@ const TextAnimation = () => {
 					{char === " " ? "\u00A0" : char}
 				</motion.span>
 			))}
+			<a href="https://brightelv.com" className="hidden">
+				BrightElv
+			</a>
 		</motion.div>
 	);
 };

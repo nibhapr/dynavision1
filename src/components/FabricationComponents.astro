@@ -1,0 +1,250 @@
+---
+// Importing necessary components
+import Layout from "@component/global/Layout/Layout.astro";
+import { SITE } from "@component/constants";
+const pageTitle: string = `Fabrication Solution In Dubai | ${SITE.title + " - " + "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates"}`;
+
+// Define TypeScript interface for props
+interface Props {
+	title: string;
+	subTitle?: string;
+	benefits?: Array<string>;
+}
+
+const abtitle: string = "Fabrication Solution In Dubai";
+const absubTitle: string =
+	"Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution.";
+---
+
+<style>
+	.autoRotate {
+		animation: autoRotateAnimation;
+		animation-timeline: view();
+	}
+	@keyframes autoRotateAnimation {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.autoShow {
+		animation: autoShowAnimation both;
+		animation-timeline: view(70% 5%);
+	}
+
+	@keyframes autoShowAnimation {
+		from {
+			opacity: 0;
+			transform: translateY(200px) scale(0.3);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+	}
+
+	.fadeInRight {
+		animation: fadeInRightAnimation;
+		animation-timeline: view();
+	}
+
+	@keyframes fadeInRightAnimation {
+		from {
+			opacity: 0;
+			transform: translateX(100px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+</style>
+
+<Layout
+	title={pageTitle}
+	structuredData={{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"@id": "https://lovosis.com/about",
+		url: "https://lovosis.com/about",
+		name: "IT Solution | Lovosis",
+		description:
+			"Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution. Learn about our commitment to excellence in the UAE construction industry.",
+		isPartOf: {
+			"@type": "WebSite",
+			url: "https://lovosis.com",
+			name: "Lovosis",
+			description:
+				"Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates.",
+		},
+		inLanguage: "en-US",
+	}}
+>
+	<section
+		class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+	>
+		<div
+			class="text-center bg-gray-100 dark:bg-neutral-500 p-5 md:p-12 rounded-2xl mb-20"
+		>
+			<h1
+				class="text-balance animate-fade-in-left text-3xl md:text-6xl md:leading-tight font-bold tracking-tight text-neutral-800 dark:text-neutral-100"
+			>
+				{abtitle}
+			</h1>
+			<p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-200">
+				{absubTitle}
+			</p>
+		</div>
+
+		<div class="grid lg:grid-cols-2 justify-items-center gap-5">
+			<div class="flex flex-col justify-center">
+				<img src="/pictures/fabrication.webp" alt="billboard image" />
+			</div>
+			<div class="order-1 lg:order-2">
+				<h2 class="text-3xl font-semibold text-gray-900 dark:text-gray-200">
+					Elevate Your Projects with Lovosis
+				</h2>
+				<p class="text-md mt-4 dark:text-gray-300">
+					Lovosis is a leading name in the custom fabrication industry in Dubai,
+					renowned for its commitment to quality, innovation, and client
+					satisfaction. We specialize in bringing your unique visions to life,
+					ensuring each project is crafted with precision and excellence.
+					Whether you require bespoke metal works, intricate wood designs, or
+					advanced composite structures, Lovosis has the expertise and resources
+					to deliver outstanding results.
+				</p>
+			</div>
+		</div>
+
+		<div class="text-center mt-32 rounded-2xl mb-20">
+			<h1
+				class="text-balance animate-fade-in-left text-2xl md:text-4xl md:leading-tight font-bold tracking-tight text-neutral-800 dark:text-neutral-100"
+			>
+				Our Services
+			</h1>
+		</div>
+
+		<div class="mx-auto max-w-7xl px-4 mt-20 sm:px-6 lg:px-8 lg:py-1">
+			<ul id="cards" class="list-none grid grid-cols-1 grid-rows-4 gap-4">
+				<li
+					class="card sticky top-32 pt-4 bg-white dark:bg-neutral-600 rounded-lg shadow-xl cursor-pointer transition-all duration-300"
+					id="card_1"
+				>
+					<div
+						class="card__content grid grid-cols-1 md:grid-cols-2 gap-1 p-5 rounded-lg text-left relative"
+					>
+						<div>
+							<h2 class="text-4xl font-light dark:text-neutral-200">
+								Metal Fabrication
+							</h2>
+							<p
+								class="text-base font-light leading-normal dark:text-neutral-300"
+							>
+								Specializing in steel, aluminum, and other metals, our metal
+								fabrication services include cutting, bending, welding, and
+								finishing. Whether you need structural components or decorative
+								elements, we can fabricate it to your specifications.
+							</p>
+						</div>
+						<figure class="overflow-hidden">
+							<img
+								src="/pictures/logo.png"
+								alt="Image description"
+								class="w-full h-full object-contain"
+							/>
+						</figure>
+					</div>
+				</li>
+				<li
+					class="card sticky top-32 pt-4 bg-white dark:bg-neutral-600 rounded-lg shadow-xl cursor-pointer transition-all duration-300"
+					id="card_1"
+				>
+					<div
+						class="card__content grid grid-cols-1 md:grid-cols-2 gap-1 p-5 rounded-lg text-left relative"
+					>
+						<div>
+							<h2 class="text-4xl font-light dark:text-neutral-200">
+								Woodworking
+							</h2>
+							<p
+								class="text-base font-light leading-normal dark:text-neutral-300"
+							>
+								Our woodworking experts create custom furniture, cabinetry, and
+								architectural woodwork. We work with a variety of wood types and
+								finishes to produce pieces that are both beautiful and
+								functional.
+							</p>
+						</div>
+						<figure class="overflow-hidden">
+							<img
+								src="/pictures/logo.png"
+								alt="Image description"
+								class="w-full h-full object-contain"
+							/>
+						</figure>
+					</div>
+				</li>
+				<li
+					class="card sticky top-32 pt-4 bg-white dark:bg-neutral-600 rounded-lg shadow-xl cursor-pointer transition-all duration-300"
+					id="card_1"
+				>
+					<div
+						class="card__content grid grid-cols-1 md:grid-cols-2 p-5 rounded-lg text-left relative"
+					>
+						<div>
+							<h2 class="text-4xl font-light dark:text-neutral-200">
+								Composite Fabrication
+							</h2>
+							<p
+								class="text-base font-light leading-normal dark:text-neutral-300"
+							>
+								Using advanced composite materials, we produce lightweight yet
+								strong structures ideal for a variety of applications, including
+								aerospace, automotive, and marine industries.
+							</p>
+						</div>
+						<figure class="overflow-hidden">
+							<img
+								src="/pictures/logo.png"
+								alt="Image description"
+								class="w-full h-full object-contain"
+							/>
+						</figure>
+					</div>
+				</li>
+				<li
+					class="card sticky top-32 pt-4 bg-white dark:bg-neutral-600 rounded-lg shadow-xl cursor-pointer transition-all duration-300"
+					id="card_1"
+				>
+					<div
+						class="card__content grid grid-cols-1 md:grid-cols-2 p-5 rounded-lg text-left relative"
+					>
+						<div>
+							<h2 class="text-4xl font-light dark:text-neutral-200">
+								Prototyping and Design
+							</h2>
+							<p
+								class="text-base font-light leading-normal dark:text-neutral-300"
+							>
+								From initial concept to final design, our prototyping services
+								help you visualize and refine your ideas. We use 3D modeling and
+								other advanced techniques to ensure your design is perfected
+								before fabrication begins.
+							</p>
+						</div>
+						<figure class="overflow-hidden">
+							<img
+								src="/pictures/logo.png"
+								alt="Image description"
+								class="w-full h-full object-contain"
+							/>
+						</figure>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+</Layout>
