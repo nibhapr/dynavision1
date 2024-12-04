@@ -17,11 +17,11 @@ import ServiceRound from "@component/ServiceRound";
 import { AlignHorizontalJustifyCenter } from "lucide-react";
 import AnnounceComponents from "@component/AnnounceComponents";
 import TextAnnimation from "@component/TextAnnimation";
+import { Icon } from "astro-icon/components";
+import PostsComponent from "@component/PostsComponent";
 
 const allPosts = await getCollection("posts");
-const postsPerPage = 15;
-const totalPages = Math.ceil(allPosts.length / postsPerPage);
-const basePath = "/posts/";
+
 const structuredData = {
 	"@context": "http://schema.org",
 	"@type": "website",
@@ -51,25 +51,12 @@ const structuredData = {
 	<!-- <ServiceAstro /> -->
 	<TitleComponents title="Our Products" />
 
-	<div
-		class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto mb-8 p-4"
-	>
-		{allPosts.map((post) => <PostCard post={post} />)}
-	</div>
-
-	<Pagination
-		currentPage={1}
-		lastPage={totalPages}
-		urlPrev={null}
-		urlNext={totalPages > 1 ? `/page/2` : null}
-		basePath={basePath}
-		maxDisplayedPages={5}
-	/>
 	<HeroSectionAlt
 		title="Enhance Learning with Our Advanced Technical School Equipment"
 		subTitle="Contact us Now"
 		url="/contact"
 	/>
+	<PostsComponent allPosts={allPosts} client:load />
 	<TestimonialsSection
 		title="Welcome to Digiimpact!"
 		subTitle="Where innovation meets execution"
